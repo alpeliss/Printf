@@ -6,15 +6,17 @@
 /*   By: alpeliss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 13:13:06 by alpeliss          #+#    #+#             */
-/*   Updated: 2020/01/27 20:57:12 by alpeliss         ###   ########.fr       */
+/*   Updated: 2020/02/07 18:56:37 by alpeliss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "../libft/includes/libft.h"
 # include <stdarg.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 typedef struct	s_tags
 {
@@ -32,9 +34,12 @@ typedef struct	s_env
 	va_list		ap;
 }				t_env;
 
-int		ft_printf(const char *s, ...);
-t_tags	find_tags(t_env *e, const char *s);
-int		ft_printf_atoi(t_env *e, const char *str);
-int		find_specifier(t_env *e, const char *s)
+int				ft_printf(const char *s, ...);
+t_tags			find_tags(t_env *e, const char *s);
+int				ft_printf_atoi(t_env *e, const char *str);
+int				find_specifier(t_env *e, const char *s);
+int				print_char(t_env *e);
+int				print_str(t_env *e);
+int				ft_strlen(char *str);
 
 #endif

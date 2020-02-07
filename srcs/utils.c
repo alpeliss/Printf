@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_atoi.c                                   :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alpeliss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/27 19:36:05 by alpeliss          #+#    #+#             */
-/*   Updated: 2020/01/27 19:38:53 by alpeliss         ###   ########.fr       */
+/*   Created: 2020/02/05 14:03:39 by alpeliss          #+#    #+#             */
+/*   Updated: 2020/02/05 14:04:41 by alpeliss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,16 @@ int	ft_printf_atoi(t_env *e, const char *str)
 			return (0);
 	}
 	return ((int)tot);
+}
+
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	if (!str)
+		return (0);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

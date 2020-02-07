@@ -6,16 +6,18 @@
 /*   By: alpeliss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 17:18:38 by alpeliss          #+#    #+#             */
-/*   Updated: 2020/01/27 20:38:00 by alpeliss         ###   ########.fr       */
+/*   Updated: 2020/02/07 18:06:17 by alpeliss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/ft_printf.h"
 #include "stdio.h"
 
-int main()
-{
-/*	printf("%d VS %d\n\n"
+void global_test(void)
+{	
+	int	i;
+	int	j;
+	printf("%d VS %d\n\n"
 			,printf("Un test\n")
 			,ft_printf("Un test\n")
 			);
@@ -25,24 +27,59 @@ int main()
 			,ft_printf("")
 			);
 
-	printf("%d VS %d\n"
-			,printf(NULL)
-			,ft_printf(NULL)
+	ft_printf(NULL);
+}
+
+void char_test(char c)
+{
+	printf("%d VS %d\n\n"
+			,printf("-%c-\n", c)
+			,ft_printf("-%c-\n", c)
+			);
+	printf("%d VS %d\n\n"
+			,printf("-%15c-\n", c)
+			,ft_printf("-%15c-\n", c)
+			);
+	printf("%d VS %d\n\n"
+			,printf("-%-15c-\n", c)
+			,ft_printf("-%-15c-\n", c)
+			);
+	printf("%d VS %d\n\n"
+			,printf("-%015c-\n", c)
+			,ft_printf("-%015c-\n", c)
+			);
+	printf("%d VS %d\n\n"
+			,printf("-%-015c-\n", c)
+			,ft_printf("-%-015c-\n", c)
 			);
 
 	printf("%d VS %d\n\n"
-			,printf("%%")
-			,ft_printf("%%")
+			,printf("-%*c-\n", 10, c)
+			,ft_printf("-%*c-\n", 10, c)
 			);
 	printf("%d VS %d\n\n"
-			,printf("")
-			,ft_printf("")
+			,printf("-%.15c-\n", c)
+			,ft_printf("-%.15c-\n", c)
 			);
 	printf("%d VS %d\n\n"
-			,printf("")
-			,ft_printf("")
+			,printf("-%.*c-\n", 10, c)
+			,ft_printf("-%.*c-\n", 10, c)
 			);
-	printf("%0.45d", 45);*/
-	ft_printf("%000-0*.*d", 45, 150);
-	printf("%o\n", -1);
+	printf("%d VS %d\n\n"
+			,printf("-%-0*c-\n", 10, c)
+			,ft_printf("-%-0*c-\n", 10, c)
+			);
+}
+
+int main()
+{
+//	printf("---------- global test-----------\n\n");
+//	global_test();
+//	printf("----------  char test  ----------\n\n");
+	char_test('*');
+//	printf("^.^/%-42c^.^/", (char)10);
+//	printf("\n\n------------\n\n");
+//	ft_printf("^.^/%-42c^.^/", (char)10);
+
+
 }

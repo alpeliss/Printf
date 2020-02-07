@@ -6,33 +6,35 @@
 /*   By: alpeliss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 17:44:10 by alpeliss          #+#    #+#             */
-/*   Updated: 2020/01/27 19:43:46 by alpeliss         ###   ########.fr       */
+/*   Updated: 2020/02/07 18:53:23 by alpeliss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static t_tags	init_tags()
+static t_tags	init_tags(void)
 {
 	t_tags	tags;
 
 	tags.flags = 1;
 	tags.width = 0;
-	tags.preci = 1;
-	tags.len = 0;
+	tags.preci = -1;
+	tags.len = 1;
 	return (tags);
 }
 
 static int		get_num_value(t_env *e, const char *s)
-{	
+{
 	int	val;
 
-	if ((val = ft_printf_atoi(e, s)) > 0 || s[e->i] == '*')
+	if ((val = ft_printf_atoi(e, s)) >= 0 || s[e->i] == '*')
 	{
-		if (val)
-			return (val);
-		e->i++;
-		return (va_arg(e->ap, int));
+		if (s[e->i] == '*')
+		{
+			e->i++;
+			return (va_arg(e->ap, int));
+		}
+		return (val);
 	}
 	return (0);
 }
@@ -42,7 +44,7 @@ t_tags			find_tags(t_env *e, const char *s)
 	t_tags	tags;
 
 	tags = init_tags();
-	while (s[e->i] == '-' || s[e->i] == '+' || s[e->i] == ' ' 
+	while (s[e->i] == '-' || s[e->i] == '+' || s[e->i] == ' '
 			|| s[e->i] == '#' || s[e->i] == '0')
 	{
 		tags.flags *= (s[e->i] == '-' && tags.flags % 2) ? 2 : 1;
@@ -56,7 +58,6 @@ t_tags			find_tags(t_env *e, const char *s)
 	if (s[e->i] == '.')
 	{
 		e->i++;
-		write(1, "EEE\n", 4);
 		tags.preci = get_num_value(e, s);
 	}
 	return (tags);

@@ -2,8 +2,10 @@ SRCDIR	= ./srcs/
 
 SRCNAME	=	ft_printf.c				\
 			find_tags.c				\
-			ft_printf_atoi.c		\
-			find_specifier.c
+			utils.c					\
+			find_specifier.c		\
+			ft_printf_char.c		\
+			ft_printf_str.c
 
 SRCS	=	${addprefix ${SRCDIR}, ${SRCNAME}}
 
