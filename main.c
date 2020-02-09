@@ -6,7 +6,7 @@
 /*   By: alpeliss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 17:18:38 by alpeliss          #+#    #+#             */
-/*   Updated: 2020/02/07 18:06:17 by alpeliss         ###   ########.fr       */
+/*   Updated: 2020/02/09 00:16:00 by alpeliss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void global_test(void)
 
 	ft_printf(NULL);
 }
-
+/*
 void char_test(char c)
 {
 	printf("%d VS %d\n\n"
@@ -70,16 +70,17 @@ void char_test(char c)
 			,ft_printf("-%-0*c-\n", 10, c)
 			);
 }
-
+*/
 int main()
 {
 //	printf("---------- global test-----------\n\n");
 //	global_test();
 //	printf("----------  char test  ----------\n\n");
-	char_test('*');
+//	char_test('*');
 //	printf("^.^/%-42c^.^/", (char)10);
 //	printf("\n\n------------\n\n");
 //	ft_printf("^.^/%-42c^.^/", (char)10);
-
-
+	printf("%lli", (long long)43);
+	printf("\n");
+	ft_printf("%lli", (long long)43);
 }
