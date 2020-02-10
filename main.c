@@ -6,12 +6,32 @@
 /*   By: alpeliss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 17:18:38 by alpeliss          #+#    #+#             */
-/*   Updated: 2020/02/09 00:16:00 by alpeliss         ###   ########.fr       */
+/*   Updated: 2020/02/10 23:35:28 by alpeliss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/ft_printf.h"
 #include "stdio.h"
+#include "limits.h"
+#include <stdarg.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <string.h>
+#include <pthread.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <strings.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <limits.h>
+#include <signal.h>
+#include <sys/wait.h>
+#include <time.h>
+#include <float.h>
+#include <termios.h>
 
 void global_test(void)
 {	
@@ -80,7 +100,7 @@ int main()
 //	printf("^.^/%-42c^.^/", (char)10);
 //	printf("\n\n------------\n\n");
 //	ft_printf("^.^/%-42c^.^/", (char)10);
-	printf("%lli", (long long)43);
+	printf("%#05x", 43);
 	printf("\n");
-	ft_printf("%lli", (long long)43);
+	ft_printf("%#05x", 43);
 }

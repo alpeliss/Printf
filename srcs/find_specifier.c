@@ -6,7 +6,7 @@
 /*   By: alpeliss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 20:22:24 by alpeliss          #+#    #+#             */
-/*   Updated: 2020/02/09 00:49:39 by alpeliss         ###   ########.fr       */
+/*   Updated: 2020/02/11 00:28:19 by alpeliss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,8 @@ int		find_specifier(t_env *e, const char *s)
 		return (print_percent(e));
 	else if (s[e->i] == 'd' || s[e->i] == 'i')
 		return (print_int(e));
-/*
-**	else if (s[e->i] == 'p')
-**		printf_ptr(e, s);
-**	else if (s[e->i] == 'u' || s[e->i] == 'x' || s[e->i] == 'X'
-**			|| s[e->i] == 'o')
-**		return (printf_uint(e, s));
-*/
+	else if (s[e->i] == 'u' || s[e->i] == 'x' || s[e->i] == 'X'
+			|| s[e->i] == 'o')
+		return (print_uint(e, s[e->i]));
 	return (0);
 }
