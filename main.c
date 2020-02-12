@@ -6,7 +6,7 @@
 /*   By: alpeliss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 17:18:38 by alpeliss          #+#    #+#             */
-/*   Updated: 2020/02/10 23:35:28 by alpeliss         ###   ########.fr       */
+/*   Updated: 2020/02/12 15:36:59 by alpeliss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,9 @@ void char_test(char c)
 */
 int main()
 {
+	char *t;
+
+	t= "iowhioewhioefhiowhfio";
 //	printf("---------- global test-----------\n\n");
 //	global_test();
 //	printf("----------  char test  ----------\n\n");
@@ -100,7 +103,7 @@ int main()
 //	printf("^.^/%-42c^.^/", (char)10);
 //	printf("\n\n------------\n\n");
 //	ft_printf("^.^/%-42c^.^/", (char)10);
-	printf("%#05x", 43);
+	printf("%p", t);
 	printf("\n");
-	ft_printf("%#05x", 43);
+	ft_printf("%p", t);
 }

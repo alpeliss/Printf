@@ -9,7 +9,8 @@ SRCNAME	=	ft_printf.c				\
 			ft_print_str.c			\
 			ft_print_percent.c		\
 			ft_print_int.c			\
-			ft_print_uint.c
+			ft_print_uint.c			\
+			ft_print_ptr.c
 
 SRCS	=	${addprefix ${SRCDIR}, ${SRCNAME}}
 

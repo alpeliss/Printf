@@ -6,7 +6,7 @@
 /*   By: alpeliss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 13:13:06 by alpeliss          #+#    #+#             */
-/*   Updated: 2020/02/11 00:31:32 by alpeliss         ###   ########.fr       */
+/*   Updated: 2020/02/12 14:16:17 by alpeliss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,6 @@ int						print_str(t_env *e);
 int						print_percent(t_env *e);
 int						print_int(t_env *e);
 int						print_uint(t_env *e, char specif);
+int						print_ptr(t_env *e);
 
 #endif

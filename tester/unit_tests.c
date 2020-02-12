@@ -986,52 +986,52 @@ static char	str_empty[] = "";
  int		mix_str_hi_str_li_emptystr(void){return test("%s%hi%s%li", str_empty, sh_neg_1, str_3, l_neg_1);}
 
 //Unsigned integers - no modifers
-int u_basic_u_pos(void){return test("this %u number", 17);}
-int u_basic_u_zero(void){return test("this %u number", 0);}
-int u_basic_u_onlypos(void){return test("%u", 3);}
-int u_uintmax(void){return test("%u", 4294967295u);}
+ int u_basic_u_pos(void){return test("this %u number", 17);}
+ int u_basic_u_zero(void){return test("this %u number", 0);}
+ int u_basic_u_onlypos(void){return test("%u", 3);}
+ int u_uintmax(void){return test("%u", 4294967295u);}
 //Unsigned integers with field width
-int u_width_pos_fits(void){return test("%7u", 33);}
-int u_width_zero_fits(void){return test("%3u", 0);}
-int u_width_pos_exactfit(void){return test("%5u", 52625);}
-int u_width_pos_nofit(void){return test("%4u", 94827);}
-int u_width_pos_fits_lj(void){return test("%-7u", 33);}
-int u_width_zero_fits_lj(void){return test("%-3u", 0);}
-int u_width_pos_exactfit_lj(void){return test("%-5u", 52625);}
-int u_width_pos_nofit_lj(void){return test("%-4u", 94827);}
+ int u_width_pos_fits(void){return test("%7u", 33);}
+ int u_width_zero_fits(void){return test("%3u", 0);}
+ int u_width_pos_exactfit(void){return test("%5u", 52625);}
+ int u_width_pos_nofit(void){return test("%4u", 94827);}
+ int u_width_pos_fits_lj(void){return test("%-7u", 33);}
+ int u_width_zero_fits_lj(void){return test("%-3u", 0);}
+ int u_width_pos_exactfit_lj(void){return test("%-5u", 52625);}
+ int u_width_pos_nofit_lj(void){return test("%-4u", 94827);}
 //unsigned integers with precision
-int u_prec_fits_pos(void){return test("%.5u", 2);}
-int u_prec_fits_zero(void){return test("%.3u", 0);}
-int u_prec_exactfit_pos(void){return test("%.4u", 5263);}
-int u_prec_nofit_pos(void){return test("%.3u", 13862);}
+ int u_prec_fits_pos(void){return test("%.5u", 2);}
+ int u_prec_fits_zero(void){return test("%.3u", 0);}
+ int u_prec_exactfit_pos(void){return test("%.4u", 5263);}
+ int u_prec_nofit_pos(void){return test("%.3u", 13862);}
 //Unsigned integers with zero field width padding
-int u_zp_pos_fits(void){return test("%05u", 43);}
-int u_zp_zero_fits(void){return test("%03u", 0);}
-int u_zp_pos_exactfit(void){return test("%03u", 634);}
+ int u_zp_pos_fits(void){return test("%05u", 43);}
+ int u_zp_zero_fits(void){return test("%03u", 0);}
+ int u_zp_pos_exactfit(void){return test("%03u", 634);}
 //Unsigned integers with field width and precision
-int u_prec_width_fit_fit_pos(void){return test("%8.5u", 34);}
-int u_prec_width_fit_fit_zero(void){return test("%8.5u", 0);}
-int u_prec_width_nofit_fit_pos(void){return test("%8.3u", 8375);}
-int u_prec_width_fit_nofit_pos(void){return test("%3.7u", 3267);}
-int u_prec_width_nofit_nofit_pos(void){return test("%3.3u", 6983);}
+ int u_prec_width_fit_fit_pos(void){return test("%8.5u", 34);}
+ int u_prec_width_fit_fit_zero(void){return test("%8.5u", 0);}
+ int u_prec_width_nofit_fit_pos(void){return test("%8.3u", 8375);}
+ int u_prec_width_fit_nofit_pos(void){return test("%3.7u", 3267);}
+ int u_prec_width_nofit_nofit_pos(void){return test("%3.3u", 6983);}
 //Unsigned integers with field width and precision, left-justified
-int u_prec_width_fit_fit_pos_lj(void){return test("%-8.5u", 34);}
-int u_prec_width_fit_fit_zero_lj(void){return test("%-8.5u", 0);}
-int u_prec_width_nofit_fit_pos_lj(void){return test("%-8.3u", 8375);}
-int u_prec_width_fit_nofit_pos_lj(void){return test("%-3.7u", 3267);}
-int u_prec_width_nofit_nofit_pos_lj(void){return test("%-3.3u", 6983);}
+ int u_prec_width_fit_fit_pos_lj(void){return test("%-8.5u", 34);}
+ int u_prec_width_fit_fit_zero_lj(void){return test("%-8.5u", 0);}
+ int u_prec_width_nofit_fit_pos_lj(void){return test("%-8.3u", 8375);}
+ int u_prec_width_fit_nofit_pos_lj(void){return test("%-3.7u", 3267);}
+ int u_prec_width_nofit_nofit_pos_lj(void){return test("%-3.3u", 6983);}
 //Unsigned integers with field width and precision with zeropadding
-int u_prec_width_ff_pos_zp(void){return test("%08.5u", 34);}
-int u_prec_width_ff_zero_zp(void){return test("%08.5u", 0);}
-int u_prec_width_nf_pos_zp(void){return test("%08.3u", 8375);}
-int u_prec_width_fn_pos_zp(void){return test("%03.7u", 3267);}
-int u_prec_width_nn_pos_zp(void){return test("%03.3u", 6983);}
+ int u_prec_width_ff_pos_zp(void){return test("%08.5u", 34);}
+ int u_prec_width_ff_zero_zp(void){return test("%08.5u", 0);}
+ int u_prec_width_nf_pos_zp(void){return test("%08.3u", 8375);}
+ int u_prec_width_fn_pos_zp(void){return test("%03.7u", 3267);}
+ int u_prec_width_nn_pos_zp(void){return test("%03.3u", 6983);}
 //Unsigned integers with field width and precision, left-justified with zeropadding
-int u_prec_width_ff_pos_ljzp_ignoreflag(void){return test("%0-8.5u", 34);}
-int u_prec_width_ff_zero_ljzp_ignoreflag(void){return test("%0-8.5u", 0);}
-int u_prec_width_nf_pos_ljzp_ignoreflag(void){return test("%0-8.3u", 8375);}
-int u_prec_width_fn_pos_ljzp_ignoreflag(void){return test("%0-3.7u", 3267);}
-int u_prec_width_nn_pos_ljzp_ignoreflag(void){return test("%0-3.3u", 6983);}
+ int u_prec_width_ff_pos_ljzp_ignoreflag(void){return test("%0-8.5u", 34);}
+ int u_prec_width_ff_zero_ljzp_ignoreflag(void){return test("%0-8.5u", 0);}
+ int u_prec_width_nf_pos_ljzp_ignoreflag(void){return test("%0-8.3u", 8375);}
+ int u_prec_width_fn_pos_ljzp_ignoreflag(void){return test("%0-3.7u", 3267);}
+ int u_prec_width_nn_pos_ljzp_ignoreflag(void){return test("%0-3.3u", 6983);}
 //Unsigned integers of varying size modifiers
 static unsigned char 		uch_pos_1 = 100;
 static unsigned short		ush_pos_1 = 3047;
@@ -1040,36 +1040,36 @@ static unsigned long		ul_pos_1 = 22337203685477;
 static unsigned long long	ull_pos_1 = 22337203685477;
 static unsigned long long  ullmax = 9223372036854775807;
 static unsigned long  		ulmax = 9223372036854775807;
-int u_size_hh_pos_casted(void){return test("%hhu", (unsigned char)45);}
-int u_size_h_pos_casted(void){return test("%hu", (unsigned short)385);}
-int u_size_l_pos_casted(void){return test("%lu", (unsigned long)32);}
-int u_size_ll_pos_casted(void){return test("%llu", (unsigned long long)43);}
-int u_size_hh_pos_ref(void){return test("%hhu", uch_pos_1);}
-int u_size_h_pos_ref(void){return test("%hu", ush_pos_1);}
-int u_size_l_pos_ref(void){return test("%lu", ul_pos_1);}
-int u_size_ll_pos_ref(void){return test("%llu", ull_pos_1);}
-int u_size_l_pos_big(void){return test("%lu", 22337203685477ul);}
-int u_size_ll_pos_big(void){return test("%llu", 522337203685470ull);}
-int u_ullmax(void){return test("%llu", ullmax);}
-int u_ulmax(void){return test("%lu", ulmax);}
-int u_uhmax(void){return test("%hu", (unsigned short)65535);}
-int u_uhhmax(void){return test("%hhu", (unsigned char)255);}
+ int u_size_hh_pos_casted(void){return test("%hhu", (unsigned char)45);}
+ int u_size_h_pos_casted(void){return test("%hu", (unsigned short)385);}
+ int u_size_l_pos_casted(void){return test("%lu", (unsigned long)32);}
+ int u_size_ll_pos_casted(void){return test("%llu", (unsigned long long)43);}
+ int u_size_hh_pos_ref(void){return test("%hhu", uch_pos_1);}
+ int u_size_h_pos_ref(void){return test("%hu", ush_pos_1);}
+ int u_size_l_pos_ref(void){return test("%lu", ul_pos_1);}
+ int u_size_ll_pos_ref(void){return test("%llu", ull_pos_1);}
+ int u_size_l_pos_big(void){return test("%lu", 22337203685477ul);}
+ int u_size_ll_pos_big(void){return test("%llu", 522337203685470ull);}
+ int u_ullmax(void){return test("%llu", ullmax);}
+ int u_ulmax(void){return test("%lu", ulmax);}
+ int u_uhmax(void){return test("%hu", (unsigned short)65535);}
+ int u_uhhmax(void){return test("%hhu", (unsigned char)255);}
 //Unsigned integers of varying size modifiers with some other modifiers
-int u_size_l_pos_big_zp(void){return test("%037lu", 22337203685477ul);}
-int u_size_ll_pos_big_width(void){return test("%37llu", 522337203685470ull);}
+ int u_size_l_pos_big_zp(void){return test("%037lu", 22337203685477ul);}
+ int u_size_ll_pos_big_width(void){return test("%37llu", 522337203685470ull);}
 //Multiple unsigned integers in a row of varying sizes
-int u_size_ll_hh_ll(void){return test("%llu%hhu%llu", ull_pos_1, uch_pos_1, ull_pos_1);}
-int u_size_h_l_hh(void){return test("%hu%lu%hhu", ush_pos_1, ul_pos_1, uch_pos_1);}
-int u_size_l_hh_h(void){return test("%lu%hhu%hu", ul_pos_1, uch_pos_1, ush_pos_1);}
-int u_size_n_ll_hh(void){return test("%u%llu%hhu", ui_pos_1, ull_pos_1, uch_pos_1);}
-int u_size_ll_n_l(void){return test("%llu%u%lu", ull_pos_1, ui_pos_1, ul_pos_1);}
+ int u_size_ll_hh_ll(void){return test("%llu%hhu%llu", ull_pos_1, uch_pos_1, ull_pos_1);}
+ int u_size_h_l_hh(void){return test("%hu%lu%hhu", ush_pos_1, ul_pos_1, uch_pos_1);}
+ int u_size_l_hh_h(void){return test("%lu%hhu%hu", ul_pos_1, uch_pos_1, ush_pos_1);}
+ int u_size_n_ll_hh(void){return test("%u%llu%hhu", ui_pos_1, ull_pos_1, uch_pos_1);}
+ int u_size_ll_n_l(void){return test("%llu%u%lu", ull_pos_1, ui_pos_1, ul_pos_1);}
 //Unsigned integers - zero precision zero value
-int u_prec0val0_basic(void){return test("%.0u", 0);}
-int u_prec0val0_implicit(void){return test("%.u", 0);}
-int u_prec0val0_w(void){return test("%5.0u", 0);}
-int u_prec0val0_w_impl(void){return test("%5.u", 0);}
-int u_prec0val0_wlj(void){return test("%-5.0u", 0);}
-int u_prec0val0_wlj_impl(void){return test("%-5.u", 0);}
+ int u_prec0val0_basic(void){return test("%.0u", 0);}
+ int u_prec0val0_implicit(void){return test("%.u", 0);}
+ int u_prec0val0_w(void){return test("%5.0u", 0);}
+ int u_prec0val0_w_impl(void){return test("%5.u", 0);}
+ int u_prec0val0_wlj(void){return test("%-5.0u", 0);}
+ int u_prec0val0_wlj_impl(void){return test("%-5.u", 0);}
 
 //Switching between string and unsigned integers of various sizes
  int		mix_hhu_str_llu_str(void){return test("%hhu%s%llu%s", uch_pos_1, str_3, ull_pos_1, str_2);}
@@ -1081,474 +1081,474 @@ int u_prec0val0_wlj_impl(void){return test("%-5.u", 0);}
 		ull_pos_1,ll_neg_1,ush_pos_1,"wassup","nope","",(short)32767,0,ul_pos_1,0ull,ui_pos_1,"notall",l_pos_1);}
 
 //Hexadecimal lowers - no modifers
-int x_basic_pos(void){return test("this %x number", 17);}
-int x_basic_zero(void){return test("this %x number", 0);}
-int x_basic_onlypos(void){return test("%x", 3);}
-int x_hexlmax(void){return test("%x", 4294967295u);}
+ int x_basic_pos(void){return test("this %x number", 17);}
+ int x_basic_zero(void){return test("this %x number", 0);}
+ int x_basic_onlypos(void){return test("%x", 3);}
+ int x_hexlmax(void){return test("%x", 4294967295u);}
 //Hexadecimal lowers with field width
-int x_width_pos_fits(void){return test("%7x", 33);}
-int x_width_zero_fits(void){return test("%3x", 0);}
-int x_width_pos_exactfit(void){return test("%5x", 52625);}
-int x_width_pos_nofit(void){return test("%2x", 94827);}
-int x_width_pos_fits_lj(void){return test("%-7x", 33);}
-int x_width_zero_fits_lj(void){return test("%-3x", 0);}
-int x_width_pos_exactfit_lj(void){return test("%-5x", 52625);}
-int x_width_pos_nofit_lj(void){return test("%-4x", 9648627);}
+ int x_width_pos_fits(void){return test("%7x", 33);}
+ int x_width_zero_fits(void){return test("%3x", 0);}
+ int x_width_pos_exactfit(void){return test("%5x", 52625);}
+ int x_width_pos_nofit(void){return test("%2x", 94827);}
+ int x_width_pos_fits_lj(void){return test("%-7x", 33);}
+ int x_width_zero_fits_lj(void){return test("%-3x", 0);}
+ int x_width_pos_exactfit_lj(void){return test("%-5x", 52625);}
+ int x_width_pos_nofit_lj(void){return test("%-4x", 9648627);}
 //Hexadecimal lowers with precision
-int x_prec_fits_pos(void){return test("%.5x", 21);}
-int x_prec_fits_zero(void){return test("%.3x", 0);}
-int x_prec_exactfit_pos(void){return test("%.4x", 5263);}
-int x_prec_nofit_pos(void){return test("%.3x", 938862);}
+ int x_prec_fits_pos(void){return test("%.5x", 21);}
+ int x_prec_fits_zero(void){return test("%.3x", 0);}
+ int x_prec_exactfit_pos(void){return test("%.4x", 5263);}
+ int x_prec_nofit_pos(void){return test("%.3x", 938862);}
 //Hexadecimal lowers with zero field width padding
-int x_zp_pos_fits(void){return test("%05x", 43);}
-int x_zp_zero_fits(void){return test("%03x", 0);}
-int x_zp_pos_exactfit(void){return test("%03x", 698334);}
+ int x_zp_pos_fits(void){return test("%05x", 43);}
+ int x_zp_zero_fits(void){return test("%03x", 0);}
+ int x_zp_pos_exactfit(void){return test("%03x", 698334);}
 //Hexadecimal lowers with field width and precision
-int x_prec_width_fit_fit_pos(void){return test("%8.5x", 34);}
-int x_prec_width_fit_fit_zero(void){return test("%8.5x", 0);}
-int x_prec_width_nofit_fit_pos(void){return test("%8.3x", 8375);}
-int x_prec_width_fit_nofit_pos(void){return test("%2.7x", 3267);}
-int x_prec_width_nofit_nofit_pos(void){return test("%3.3x", 6983);}
+ int x_prec_width_fit_fit_pos(void){return test("%8.5x", 34);}
+ int x_prec_width_fit_fit_zero(void){return test("%8.5x", 0);}
+ int x_prec_width_nofit_fit_pos(void){return test("%8.3x", 8375);}
+ int x_prec_width_fit_nofit_pos(void){return test("%2.7x", 3267);}
+ int x_prec_width_nofit_nofit_pos(void){return test("%3.3x", 6983);}
 //Hexadecimal lowers with field width and precision, left-justified
-int x_prec_width_fit_fit_pos_lj(void){return test("%-8.5x", 34);}
-int x_prec_width_fit_fit_zero_lj(void){return test("%-8.5x", 0);}
-int x_prec_width_nofit_fit_pos_lj(void){return test("%-8.3x", 8375);}
-int x_prec_width_fit_nofit_pos_lj(void){return test("%-2.7x", 3267);}
-int x_prec_width_nofit_nofit_pos_lj(void){return test("%-3.3x", 6983);}
+ int x_prec_width_fit_fit_pos_lj(void){return test("%-8.5x", 34);}
+ int x_prec_width_fit_fit_zero_lj(void){return test("%-8.5x", 0);}
+ int x_prec_width_nofit_fit_pos_lj(void){return test("%-8.3x", 8375);}
+ int x_prec_width_fit_nofit_pos_lj(void){return test("%-2.7x", 3267);}
+ int x_prec_width_nofit_nofit_pos_lj(void){return test("%-3.3x", 6983);}
 //Hexadecimal lowers with field width and precision with zeropadding
-int x_prec_width_ff_pos_zp(void){return test("%08.5x", 34);}
-int x_prec_width_ff_zero_zp(void){return test("%08.5x", 0);}
-int x_prec_width_nf_pos_zp(void){return test("%08.3x", 8375);}
-int x_prec_width_fn_pos_zp(void){return test("%02.7x", 3267);}
-int x_prec_width_nn_pos_zp(void){return test("%03.3x", 6983);}
+ int x_prec_width_ff_pos_zp(void){return test("%08.5x", 34);}
+ int x_prec_width_ff_zero_zp(void){return test("%08.5x", 0);}
+ int x_prec_width_nf_pos_zp(void){return test("%08.3x", 8375);}
+ int x_prec_width_fn_pos_zp(void){return test("%02.7x", 3267);}
+ int x_prec_width_nn_pos_zp(void){return test("%03.3x", 6983);}
 //Hexadecimal lowers with field width and precision, left-justified with zeropadding
-int x_prec_width_ff_pos_ljzp_ignoreflag(void){return test("%0-8.5x", 34);}
-int x_prec_width_ff_zero_ljzp_ignoreflag(void){return test("%0-8.5x", 0);}
-int x_prec_width_nf_pos_ljzp_ignoreflag(void){return test("%0-8.3x", 8375);}
-int x_prec_width_fn_pos_ljzp_ignoreflag(void){return test("%0-2.7x", 3267);}
-int x_prec_width_nn_pos_ljzp_ignoreflag(void){return test("%0-3.3x", 6983);}
+ int x_prec_width_ff_pos_ljzp_ignoreflag(void){return test("%0-8.5x", 34);}
+ int x_prec_width_ff_zero_ljzp_ignoreflag(void){return test("%0-8.5x", 0);}
+ int x_prec_width_nf_pos_ljzp_ignoreflag(void){return test("%0-8.3x", 8375);}
+ int x_prec_width_fn_pos_ljzp_ignoreflag(void){return test("%0-2.7x", 3267);}
+ int x_prec_width_nn_pos_ljzp_ignoreflag(void){return test("%0-3.3x", 6983);}
 //Hexadecimal lowers of varying size modifiers
-int x_size_hh_pos_casted(void){return test("%hhx", (unsigned char)45);}
-int x_size_h_pos_casted(void){return test("%hx", (unsigned short)385);}
-int x_size_l_pos_casted(void){return test("%lx", (unsigned long)32);}
-int x_size_ll_pos_casted(void){return test("%llx", (long long)43);}
-int x_size_hh_pos_ref(void){return test("%hhx", uch_pos_1);}
-int x_size_h_pos_ref(void){return test("%hx", ush_pos_1);}
-int x_size_l_pos_ref(void){return test("%lx", ul_pos_1);}
-int x_size_ll_pos_ref(void){return test("%llx", ull_pos_1);}
-int x_size_l_pos_big(void){return test("%lx", 22337203685477ul);}
-int x_size_ll_pos_big(void){return test("%llx", 522337203685470ull);}
-int x_ullmax(void){return test("%llx", ullmax);}
-int x_ulmax(void){return test("%lx", ulmax);}
-int x_uhmax(void){return test("%hx", (unsigned short)65535);}
-int x_uhhmax(void){return test("%hhx", (unsigned char)255);}
+ int x_size_hh_pos_casted(void){return test("%hhx", (unsigned char)45);}
+ int x_size_h_pos_casted(void){return test("%hx", (unsigned short)385);}
+ int x_size_l_pos_casted(void){return test("%lx", (unsigned long)32);}
+ int x_size_ll_pos_casted(void){return test("%llx", (long long)43);}
+ int x_size_hh_pos_ref(void){return test("%hhx", uch_pos_1);}
+ int x_size_h_pos_ref(void){return test("%hx", ush_pos_1);}
+ int x_size_l_pos_ref(void){return test("%lx", ul_pos_1);}
+ int x_size_ll_pos_ref(void){return test("%llx", ull_pos_1);}
+ int x_size_l_pos_big(void){return test("%lx", 22337203685477ul);}
+ int x_size_ll_pos_big(void){return test("%llx", 522337203685470ull);}
+ int x_ullmax(void){return test("%llx", ullmax);}
+ int x_ulmax(void){return test("%lx", ulmax);}
+ int x_uhmax(void){return test("%hx", (unsigned short)65535);}
+ int x_uhhmax(void){return test("%hhx", (unsigned char)255);}
 //Hexadecimal lowers of varying size modifiers with some other modifiers
-int x_size_l_pos_big_zp(void){return test("%037lx", 22337203685477ul);}
-int x_size_ll_pos_big_width(void){return test("%37llx", 522337203685470ull);}
+ int x_size_l_pos_big_zp(void){return test("%037lx", 22337203685477ul);}
+ int x_size_ll_pos_big_width(void){return test("%37llx", 522337203685470ull);}
 //Multiple Hexadecimal lowers in a row of varying sizes
-int x_size_ll_hh_ll(void){return test("%llu%hhu%llx", ull_pos_1, uch_pos_1, ull_pos_1);}
-int x_size_h_l_hh(void){return test("%hu%lu%hhx", ush_pos_1, ul_pos_1, uch_pos_1);}
-int x_size_l_hh_h(void){return test("%lu%hhu%hx", ul_pos_1, uch_pos_1, ush_pos_1);}
-int x_size_n_ll_hh(void){return test("%u%llu%hhx", ui_pos_1, ull_pos_1, uch_pos_1);}
-int x_size_ll_n_l(void){return test("%llu%u%lx", ull_pos_1, ui_pos_1, ul_pos_1);}
+ int x_size_ll_hh_ll(void){return test("%llu%hhu%llx", ull_pos_1, uch_pos_1, ull_pos_1);}
+ int x_size_h_l_hh(void){return test("%hu%lu%hhx", ush_pos_1, ul_pos_1, uch_pos_1);}
+ int x_size_l_hh_h(void){return test("%lu%hhu%hx", ul_pos_1, uch_pos_1, ush_pos_1);}
+ int x_size_n_ll_hh(void){return test("%u%llu%hhx", ui_pos_1, ull_pos_1, uch_pos_1);}
+ int x_size_ll_n_l(void){return test("%llu%u%lx", ull_pos_1, ui_pos_1, ul_pos_1);}
 //Hexadecimal lower (altform) - no modifers
-int		x_basic_pos_af(void){return test("this %#x number", 17);}
-int		x_basic_zero_af(void){return test("this %#x number", 0);}
-int		x_basic_onlypos_af(void){return test("%#x", 3);}
-int x_hexlmax_af(void){return test("%#x", 4294967295u);}
+ int		x_basic_pos_af(void){return test("this %#x number", 17);}
+ int		x_basic_zero_af(void){return test("this %#x number", 0);}
+ int		x_basic_onlypos_af(void){return test("%#x", 3);}
+ int x_hexlmax_af(void){return test("%#x", 4294967295u);}
 //Hexadecimal lower (altform) with field width
-int x_width_pos_fits_af(void){return test("%#7x", 33);}
-int x_width_zero_fits_af(void){return test("%#3x", 0);}
-int x_width_pos_exactfit_af(void){return test("%#5x", 52625);}
-int x_width_pos_nofit_af(void){return test("%#2x", 94827);}
-int x_width_pos_fits_lj_af(void){return test("%#-7x", 33);}
-int x_width_zero_fits_lj_af(void){return test("%#-3x", 0);}
-int x_width_pos_exactfit_lj_af(void){return test("%#-5x", 52625);}
-int x_width_pos_nofit_lj_af(void){return test("%#-4x", 9648627);}
+ int x_width_pos_fits_af(void){return test("%#7x", 33);}
+ int x_width_zero_fits_af(void){return test("%#3x", 0);}
+ int x_width_pos_exactfit_af(void){return test("%#5x", 52625);}
+ int x_width_pos_nofit_af(void){return test("%#2x", 94827);}
+ int x_width_pos_fits_lj_af(void){return test("%#-7x", 33);}
+ int x_width_zero_fits_lj_af(void){return test("%#-3x", 0);}
+ int x_width_pos_exactfit_lj_af(void){return test("%#-5x", 52625);}
+ int x_width_pos_nofit_lj_af(void){return test("%#-4x", 9648627);}
 //Hexadecimal lower (altform) with precision
-int x_prec_fits_pos_af(void){return test("%#.5x", 21);}
-int x_prec_fits_zero_af(void){return test("%#.3x", 0);}
-int x_prec_exactfit_pos_af(void){return test("%#.4x", 5263);}
-int x_prec_nofit_pos_af(void){return test("%#.3x", 938862);}
+ int x_prec_fits_pos_af(void){return test("%#.5x", 21);}
+ int x_prec_fits_zero_af(void){return test("%#.3x", 0);}
+ int x_prec_exactfit_pos_af(void){return test("%#.4x", 5263);}
+ int x_prec_nofit_pos_af(void){return test("%#.3x", 938862);}
 //Hexadecimal lower (altform) with zero field width padding
-int x_zp_pos_fits_af(void){return test("%#05x", 43);}
-int x_zp_zero_fits_af(void){return test("%#03x", 0);}
-int x_zp_pos_exactfit_af(void){return test("%#03x", 698334);}
+ int x_zp_pos_fits_af(void){return test("%#05x", 43);}
+ int x_zp_zero_fits_af(void){return test("%#03x", 0);}
+ int x_zp_pos_exactfit_af(void){return test("%#03x", 698334);}
 //Hexadecimal lower (altform) with field width and precision
-int x_prec_width_fit_fit_pos_af(void){return test("%#8.5x", 34);}
-int x_prec_width_fit_fit_zero_af(void){return test("%#8.5x", 0);}
-int x_prec_width_nofit_fit_pos_af(void){return test("%#8.3x", 8375);}
-int x_prec_width_fit_nofit_pos_af(void){return test("%#2.7x", 3267);}
-int x_prec_width_nofit_nofit_pos_af(void){return test("%#3.3x", 6983);}
+ int x_prec_width_fit_fit_pos_af(void){return test("%#8.5x", 34);}
+ int x_prec_width_fit_fit_zero_af(void){return test("%#8.5x", 0);}
+ int x_prec_width_nofit_fit_pos_af(void){return test("%#8.3x", 8375);}
+ int x_prec_width_fit_nofit_pos_af(void){return test("%#2.7x", 3267);}
+ int x_prec_width_nofit_nofit_pos_af(void){return test("%#3.3x", 6983);}
 //Hexadecimal lower (altform) with field width and precision, left-justified
-int x_prec_width_fit_fit_pos_lj_af(void){return test("%#-8.5x", 34);}
-int x_prec_width_fit_fit_zero_lj_af(void){return test("%#-8.5x", 0);}
-int x_prec_width_nofit_fit_pos_lj_af(void){return test("%#-8.3x", 8375);}
-int x_prec_width_fit_nofit_pos_lj_af(void){return test("%#-2.7x", 3267);}
-int x_prec_width_nofit_nofit_pos_lj_af(void){return test("%#-3.3x", 6983);}
+ int x_prec_width_fit_fit_pos_lj_af(void){return test("%#-8.5x", 34);}
+ int x_prec_width_fit_fit_zero_lj_af(void){return test("%#-8.5x", 0);}
+ int x_prec_width_nofit_fit_pos_lj_af(void){return test("%#-8.3x", 8375);}
+ int x_prec_width_fit_nofit_pos_lj_af(void){return test("%#-2.7x", 3267);}
+ int x_prec_width_nofit_nofit_pos_lj_af(void){return test("%#-3.3x", 6983);}
 //Hexadecimal lower (altform) with field width and precision with zeropadding
-int x_prec_width_ff_pos_zp_af(void){return test("%#08.5x", 34);}
-int x_prec_width_ff_zero_zp_af(void){return test("%#08.5x", 0);}
-int x_prec_width_nf_pos_zp_af(void){return test("%#08.3x", 8375);}
-int x_prec_width_fn_pos_zp_af(void){return test("%#02.7x", 3267);}
-int x_prec_width_nn_pos_zp_af(void){return test("%#03.3x", 6983);}
+ int x_prec_width_ff_pos_zp_af(void){return test("%#08.5x", 34);}
+ int x_prec_width_ff_zero_zp_af(void){return test("%#08.5x", 0);}
+ int x_prec_width_nf_pos_zp_af(void){return test("%#08.3x", 8375);}
+ int x_prec_width_fn_pos_zp_af(void){return test("%#02.7x", 3267);}
+ int x_prec_width_nn_pos_zp_af(void){return test("%#03.3x", 6983);}
 //Hexadecimal lower (altform) with field width and precision, left-justified with zeropadding
-int x_prec_width_ff_pos_ljzpaf_ignoreflag(void){return test("%#0-8.5x", 34);}
-int x_prec_width_ff_zero_ljzpaf_ignoreflag(void){return test("%#0-8.5x", 0);}
-int x_prec_width_nf_pos_ljzpaf_ignoreflag(void){return test("%#0-8.3x", 8375);}
-int x_prec_width_fn_pos_ljzpaf_ignoreflag(void){return test("%#0-2.7x", 3267);}
-int x_prec_width_nn_pos_ljzpaf_ignoreflag(void){return test("%#0-3.3x", 6983);}
+ int x_prec_width_ff_pos_ljzpaf_ignoreflag(void){return test("%#0-8.5x", 34);}
+ int x_prec_width_ff_zero_ljzpaf_ignoreflag(void){return test("%#0-8.5x", 0);}
+ int x_prec_width_nf_pos_ljzpaf_ignoreflag(void){return test("%#0-8.3x", 8375);}
+ int x_prec_width_fn_pos_ljzpaf_ignoreflag(void){return test("%#0-2.7x", 3267);}
+ int x_prec_width_nn_pos_ljzpaf_ignoreflag(void){return test("%#0-3.3x", 6983);}
 //Hexadecimal lower (altform) of varying size modifiers
-int x_size_hh_pos_casted_af(void){return test("%#hhx", (unsigned char)45);}
-int x_size_h_pos_casted_af(void){return test("%#hx", (unsigned short)385);}
-int x_size_l_pos_casted_af(void){return test("%#lx", (unsigned long)32);}
-int x_size_ll_pos_casted_af(void){return test("%#llx", (long long)43);}
-int x_size_hh_pos_ref_af(void){return test("%#hhx", uch_pos_1);}
-int x_size_h_pos_ref_af(void){return test("%#hx", ush_pos_1);}
-int x_size_l_pos_ref_af(void){return test("%#lx", ul_pos_1);}
-int x_size_ll_pos_ref_af(void){return test("%#llx", ull_pos_1);}
-int x_size_l_pos_big_af(void){return test("%#lx", 22337203685477lu);}
-int x_size_ll_pos_big_af(void){return test("%#llx", 522337203685470llu);}
-int x_ullmax_af(void){return test("%#llx", ullmax);}
-int x_ulmax_af(void){return test("%#lx", ulmax);}
-int x_uhmax_af(void){return test("%#hx", (unsigned short)65535);}
-int x_uhhmax_af(void){return test("%#hhx", (unsigned char)255);}
+ int x_size_hh_pos_casted_af(void){return test("%#hhx", (unsigned char)45);}
+ int x_size_h_pos_casted_af(void){return test("%#hx", (unsigned short)385);}
+ int x_size_l_pos_casted_af(void){return test("%#lx", (unsigned long)32);}
+ int x_size_ll_pos_casted_af(void){return test("%#llx", (long long)43);}
+ int x_size_hh_pos_ref_af(void){return test("%#hhx", uch_pos_1);}
+ int x_size_h_pos_ref_af(void){return test("%#hx", ush_pos_1);}
+ int x_size_l_pos_ref_af(void){return test("%#lx", ul_pos_1);}
+ int x_size_ll_pos_ref_af(void){return test("%#llx", ull_pos_1);}
+ int x_size_l_pos_big_af(void){return test("%#lx", 22337203685477lu);}
+ int x_size_ll_pos_big_af(void){return test("%#llx", 522337203685470llu);}
+ int x_ullmax_af(void){return test("%#llx", ullmax);}
+ int x_ulmax_af(void){return test("%#lx", ulmax);}
+ int x_uhmax_af(void){return test("%#hx", (unsigned short)65535);}
+ int x_uhhmax_af(void){return test("%#hhx", (unsigned char)255);}
 //Hexadecimal lower (altform) of varying size modifiers with some other modifiers
-int x_size_l_pos_big_zp_af(void){return test("%#037lx", 22337203685477ul);}
-int x_size_ll_pos_big_width_af(void){return test("%#37llx", 522337203685470ull);}
+ int x_size_l_pos_big_zp_af(void){return test("%#037lx", 22337203685477ul);}
+ int x_size_ll_pos_big_width_af(void){return test("%#37llx", 522337203685470ull);}
 //Multiple Hexadecimal lower (altform) in a row of varying sizes
-int x_size_ll_hh_ll_af(void){return test("%llu%hhu%#llx", ull_pos_1, uch_pos_1, ull_pos_1);}
-int x_size_h_l_hh_af(void){return test("%hu%#lx%hhx", ush_pos_1, ul_pos_1, uch_pos_1);}
-int x_size_l_hh_h_af(void){return test("%lu%hhu%#hx", ul_pos_1, uch_pos_1, ush_pos_1);}
-int x_size_n_ll_hh_af(void){return test("%#x%llu%hhx", ui_pos_1, ull_pos_1, uch_pos_1);}
-int x_size_ll_n_l_af(void){return test("%llu%u%#lx", ull_pos_1, ui_pos_1, ul_pos_1);}
+ int x_size_ll_hh_ll_af(void){return test("%llu%hhu%#llx", ull_pos_1, uch_pos_1, ull_pos_1);}
+ int x_size_h_l_hh_af(void){return test("%hu%#lx%hhx", ush_pos_1, ul_pos_1, uch_pos_1);}
+ int x_size_l_hh_h_af(void){return test("%lu%hhu%#hx", ul_pos_1, uch_pos_1, ush_pos_1);}
+ int x_size_n_ll_hh_af(void){return test("%#x%llu%hhx", ui_pos_1, ull_pos_1, uch_pos_1);}
+ int x_size_ll_n_l_af(void){return test("%llu%u%#lx", ull_pos_1, ui_pos_1, ul_pos_1);}
  //Hexadecimal lower - zero precision zero value
-int x_prec0val0_basic(void){return test("%.0x", 0);}
-int x_prec0val0_implicit(void){return test("%.x", 0);}
-int x_prec0val0_w(void){return test("%5.0x", 0);}
-int x_prec0val0_w_impl(void){return test("%5.x", 0);}
-int x_prec0val0_wlj(void){return test("%-5.0x", 0);}
-int x_prec0val0_wlj_impl(void){return test("%-5.x", 0);}
-int x_prec0val0_af(void){return test("%#.0x", 0);}
-int x_prec0val0_af_impl(void){return test("%#.x", 0);}
-int x_prec0val0_waf(void){return test("%#5.0x", 0);}
-int x_prec0val0_waf_impl(void){return test("%#5.x", 0);}
-int x_prec0val0_waflj(void){return test("%#-5.0x", 0);}
-int x_prec0val0_waflj_impl(void){return test("%#-5.x", 0);}
+ int x_prec0val0_basic(void){return test("%.0x", 0);}
+ int x_prec0val0_implicit(void){return test("%.x", 0);}
+ int x_prec0val0_w(void){return test("%5.0x", 0);}
+ int x_prec0val0_w_impl(void){return test("%5.x", 0);}
+ int x_prec0val0_wlj(void){return test("%-5.0x", 0);}
+ int x_prec0val0_wlj_impl(void){return test("%-5.x", 0);}
+ int x_prec0val0_af(void){return test("%#.0x", 0);}
+ int x_prec0val0_af_impl(void){return test("%#.x", 0);}
+ int x_prec0val0_waf(void){return test("%#5.0x", 0);}
+ int x_prec0val0_waf_impl(void){return test("%#5.x", 0);}
+ int x_prec0val0_waflj(void){return test("%#-5.0x", 0);}
+ int x_prec0val0_waflj_impl(void){return test("%#-5.x", 0);}
 
 
 //Hexadecimal uppers - no modifers
-int X_basic_hexu_pos(void){return test("this %X number", 17);}
-int X_basic_hexu_zero(void){return test("this %X number", 0);}
-int X_basic_hexu_onlypos(void){return test("%X", 3);}
-int X_hexumax(void){return test("%X", 4294967295u);}
+ int X_basic_hexu_pos(void){return test("this %X number", 17);}
+ int X_basic_hexu_zero(void){return test("this %X number", 0);}
+ int X_basic_hexu_onlypos(void){return test("%X", 3);}
+ int X_hexumax(void){return test("%X", 4294967295u);}
 //Hexadecimal uppers with field width
-int X_width_pos_fits(void){return test("%7X", 33);}
-int X_width_zero_fits(void){return test("%3X", 0);}
-int X_width_pos_exactfit(void){return test("%5X", 52625);}
-int X_width_pos_nofit(void){return test("%2X", 94827);}
-int X_width_pos_fits_lj(void){return test("%-7X", 33);}
-int X_width_zero_fits_lj(void){return test("%-3X", 0);}
-int X_width_pos_exactfit_lj(void){return test("%-5X", 52625);}
-int X_width_pos_nofit_lj(void){return test("%-4X", 9648627);}
+ int X_width_pos_fits(void){return test("%7X", 33);}
+ int X_width_zero_fits(void){return test("%3X", 0);}
+ int X_width_pos_exactfit(void){return test("%5X", 52625);}
+ int X_width_pos_nofit(void){return test("%2X", 94827);}
+ int X_width_pos_fits_lj(void){return test("%-7X", 33);}
+ int X_width_zero_fits_lj(void){return test("%-3X", 0);}
+ int X_width_pos_exactfit_lj(void){return test("%-5X", 52625);}
+ int X_width_pos_nofit_lj(void){return test("%-4X", 9648627);}
 //Hexadecimal uppers with precision
-int X_prec_fits_pos(void){return test("%.5X", 21);}
-int X_prec_fits_zero(void){return test("%.3X", 0);}
-int X_prec_exactfit_pos(void){return test("%.4X", 5263);}
-int X_prec_nofit_pos(void){return test("%.3X", 938862);}
+ int X_prec_fits_pos(void){return test("%.5X", 21);}
+ int X_prec_fits_zero(void){return test("%.3X", 0);}
+ int X_prec_exactfit_pos(void){return test("%.4X", 5263);}
+ int X_prec_nofit_pos(void){return test("%.3X", 938862);}
 //Hexadecimal uppers with zero field width padding
-int X_zp_pos_fits(void){return test("%05X", 43);}
-int X_zp_zero_fits(void){return test("%03X", 0);}
-int X_zp_pos_exactfit(void){return test("%03X", 698334);}
+ int X_zp_pos_fits(void){return test("%05X", 43);}
+ int X_zp_zero_fits(void){return test("%03X", 0);}
+ int X_zp_pos_exactfit(void){return test("%03X", 698334);}
 //Hexadecimal uppers with field width and precision
-int X_prec_width_fit_fit_pos(void){return test("%8.5X", 34);}
-int X_prec_width_fit_fit_zero(void){return test("%8.5X", 0);}
-int X_prec_width_nofit_fit_pos(void){return test("%8.3X", 8375);}
-int X_prec_width_fit_nofit_pos(void){return test("%2.7X", 3267);}
-int X_prec_width_nofit_nofit_pos(void){return test("%3.3X", 6983);}
+ int X_prec_width_fit_fit_pos(void){return test("%8.5X", 34);}
+ int X_prec_width_fit_fit_zero(void){return test("%8.5X", 0);}
+ int X_prec_width_nofit_fit_pos(void){return test("%8.3X", 8375);}
+ int X_prec_width_fit_nofit_pos(void){return test("%2.7X", 3267);}
+ int X_prec_width_nofit_nofit_pos(void){return test("%3.3X", 6983);}
 //Hexadecimal uppers with field width and precision, left-justified
-int X_prec_width_fit_fit_pos_lj(void){return test("%-8.5X", 34);}
-int X_prec_width_fit_fit_zero_lj(void){return test("%-8.5X", 0);}
-int X_prec_width_nofit_fit_pos_lj(void){return test("%-8.3X", 8375);}
-int X_prec_width_fit_nofit_pos_lj(void){return test("%-2.7X", 3267);}
-int X_prec_width_nofit_nofit_pos_lj(void){return test("%-3.3X", 6983);}
+ int X_prec_width_fit_fit_pos_lj(void){return test("%-8.5X", 34);}
+ int X_prec_width_fit_fit_zero_lj(void){return test("%-8.5X", 0);}
+ int X_prec_width_nofit_fit_pos_lj(void){return test("%-8.3X", 8375);}
+ int X_prec_width_fit_nofit_pos_lj(void){return test("%-2.7X", 3267);}
+ int X_prec_width_nofit_nofit_pos_lj(void){return test("%-3.3X", 6983);}
 //Hexadecimal uppers with field width and precision with zeropadding
-int X_prec_width_ff_pos_zp(void){return test("%08.5X", 34);}
-int X_prec_width_ff_zero_zp(void){return test("%08.5X", 0);}
-int X_prec_width_nf_pos_zp(void){return test("%08.3X", 8375);}
-int X_prec_width_fn_pos_zp(void){return test("%02.7X", 3267);}
-int X_prec_width_nn_pos_zp(void){return test("%03.3X", 6983);}
+ int X_prec_width_ff_pos_zp(void){return test("%08.5X", 34);}
+ int X_prec_width_ff_zero_zp(void){return test("%08.5X", 0);}
+ int X_prec_width_nf_pos_zp(void){return test("%08.3X", 8375);}
+ int X_prec_width_fn_pos_zp(void){return test("%02.7X", 3267);}
+ int X_prec_width_nn_pos_zp(void){return test("%03.3X", 6983);}
 //Hexadecimal uppers with field width and precision, left-justified with zeropadding
-int X_prec_width_ff_pos_ljzp_ignoreflag(void){return test("%0-8.5X", 34);}
-int X_prec_width_ff_zero_ljzp_ignoreflag(void){return test("%0-8.5X", 0);}
-int X_prec_width_nf_pos_ljzp_ignoreflag(void){return test("%0-8.3X", 8375);}
-int X_prec_width_fn_pos_ljzp_ignoreflag(void){return test("%0-2.7X", 3267);}
-int X_prec_width_nn_pos_ljzp_ignoreflag(void){return test("%0-3.3X", 6983);}
+ int X_prec_width_ff_pos_ljzp_ignoreflag(void){return test("%0-8.5X", 34);}
+ int X_prec_width_ff_zero_ljzp_ignoreflag(void){return test("%0-8.5X", 0);}
+ int X_prec_width_nf_pos_ljzp_ignoreflag(void){return test("%0-8.3X", 8375);}
+ int X_prec_width_fn_pos_ljzp_ignoreflag(void){return test("%0-2.7X", 3267);}
+ int X_prec_width_nn_pos_ljzp_ignoreflag(void){return test("%0-3.3X", 6983);}
 //Hexadecimal uppers of varying size modifiers
-int X_size_hh_pos_casted(void){return test("%hhX", (unsigned char)45);}
-int X_size_h_pos_casted(void){return test("%hX", (unsigned short)385);}
-int X_size_l_pos_casted(void){return test("%lX", (unsigned long)32);}
-int X_size_ll_pos_casted(void){return test("%llX", (long long)43);}
-int X_size_hh_pos_ref(void){return test("%hhX", uch_pos_1);}
-int X_size_h_pos_ref(void){return test("%hX", ush_pos_1);}
-int X_size_l_pos_ref(void){return test("%lX", ul_pos_1);}
-int X_size_ll_pos_ref(void){return test("%llX", ull_pos_1);}
-int X_size_l_pos_big(void){return test("%lX", 22337203685477ul);}
-int X_size_ll_pos_big(void){return test("%llX", 522337203685470ull);}
-int X_ullmax(void){return test("%llX", ullmax);}
-int X_ulmax(void){return test("%lX", ulmax);}
-int X_uhmax(void){return test("%hX", (unsigned short)65535);}
-int X_uhhmax(void){return test("%hhX", (unsigned char)255);}
+ int X_size_hh_pos_casted(void){return test("%hhX", (unsigned char)45);}
+ int X_size_h_pos_casted(void){return test("%hX", (unsigned short)385);}
+ int X_size_l_pos_casted(void){return test("%lX", (unsigned long)32);}
+ int X_size_ll_pos_casted(void){return test("%llX", (long long)43);}
+ int X_size_hh_pos_ref(void){return test("%hhX", uch_pos_1);}
+ int X_size_h_pos_ref(void){return test("%hX", ush_pos_1);}
+ int X_size_l_pos_ref(void){return test("%lX", ul_pos_1);}
+ int X_size_ll_pos_ref(void){return test("%llX", ull_pos_1);}
+ int X_size_l_pos_big(void){return test("%lX", 22337203685477ul);}
+ int X_size_ll_pos_big(void){return test("%llX", 522337203685470ull);}
+ int X_ullmax(void){return test("%llX", ullmax);}
+ int X_ulmax(void){return test("%lX", ulmax);}
+ int X_uhmax(void){return test("%hX", (unsigned short)65535);}
+ int X_uhhmax(void){return test("%hhX", (unsigned char)255);}
 //Hexadecimal uppers of varying size modifiers with some other modifiers
-int X_size_l_pos_big_zp(void){return test("%037lX", 22337203685477ul);}
-int X_size_ll_pos_big_width(void){return test("%37llX", 522337203685470ull);}
+ int X_size_l_pos_big_zp(void){return test("%037lX", 22337203685477ul);}
+ int X_size_ll_pos_big_width(void){return test("%37llX", 522337203685470ull);}
 //Multiple Hexadecimal uppers in a row of varying sizes
-int X_size_ll_hh_ll(void){return test("%llu%hhu%llX", ull_pos_1, uch_pos_1, ull_pos_1);}
-int X_size_h_l_hh(void){return test("%hu%lu%hhX", ush_pos_1, ul_pos_1, uch_pos_1);}
-int X_size_l_hh_h(void){return test("%lu%hhu%hX", ul_pos_1, uch_pos_1, ush_pos_1);}
-int X_size_n_ll_hh(void){return test("%u%llu%hhX", ui_pos_1, ull_pos_1, uch_pos_1);}
-int X_size_ll_n_l(void){return test("%llu%u%lX", ull_pos_1, ui_pos_1, ul_pos_1);}
+ int X_size_ll_hh_ll(void){return test("%llu%hhu%llX", ull_pos_1, uch_pos_1, ull_pos_1);}
+ int X_size_h_l_hh(void){return test("%hu%lu%hhX", ush_pos_1, ul_pos_1, uch_pos_1);}
+ int X_size_l_hh_h(void){return test("%lu%hhu%hX", ul_pos_1, uch_pos_1, ush_pos_1);}
+ int X_size_n_ll_hh(void){return test("%u%llu%hhX", ui_pos_1, ull_pos_1, uch_pos_1);}
+ int X_size_ll_n_l(void){return test("%llu%u%lX", ull_pos_1, ui_pos_1, ul_pos_1);}
 //Hex uppers (altform) - no modifers
-int X_basic_hexu_pos_af(void){return test("this %#X number", 17);}
-int X_basic_hexu_zero_af(void){return test("this %#X number", 0);}
-int X_basic_hexu_onlypos_af(void){return test("%#X", 3);}
-int X_hexumax_af(void){return test("%#X", 4294967295u);}
+ int X_basic_hexu_pos_af(void){return test("this %#X number", 17);}
+ int X_basic_hexu_zero_af(void){return test("this %#X number", 0);}
+ int X_basic_hexu_onlypos_af(void){return test("%#X", 3);}
+ int X_hexumax_af(void){return test("%#X", 4294967295u);}
 //Hex uppers (altform) with field width
-int X_width_pos_fits_af(void){return test("%#7X", 33);}
-int X_width_zero_fits_af(void){return test("%#3X", 0);}
-int X_width_pos_exactfit_af(void){return test("%#7X", 52625);}
-int X_width_pos_nofit_af(void){return test("%#2X", 94827);}
-int X_width_pos_fits_lj_af(void){return test("%#-7X", 33);}
-int X_width_zero_fits_lj_af(void){return test("%#-3X", 0);}
-int X_width_pos_exactfit_lj_af(void){return test("%#-7X", 52625);}
-int X_width_pos_nofit_lj_af(void){return test("%#-4X", 9648627);}
+ int X_width_pos_fits_af(void){return test("%#7X", 33);}
+ int X_width_zero_fits_af(void){return test("%#3X", 0);}
+ int X_width_pos_exactfit_af(void){return test("%#7X", 52625);}
+ int X_width_pos_nofit_af(void){return test("%#2X", 94827);}
+ int X_width_pos_fits_lj_af(void){return test("%#-7X", 33);}
+ int X_width_zero_fits_lj_af(void){return test("%#-3X", 0);}
+ int X_width_pos_exactfit_lj_af(void){return test("%#-7X", 52625);}
+ int X_width_pos_nofit_lj_af(void){return test("%#-4X", 9648627);}
 //Hex uppers (altform) with precision
-int X_prec_fits_pos_af(void){return test("%#.5X", 21);}
-int X_prec_fits_zero_af(void){return test("%#.3X", 0);}
-int X_prec_exactfit_pos_af(void){return test("%#.4X", 5263);}
-int X_prec_nofit_pos_af(void){return test("%#.3X", 938862);}
+ int X_prec_fits_pos_af(void){return test("%#.5X", 21);}
+ int X_prec_fits_zero_af(void){return test("%#.3X", 0);}
+ int X_prec_exactfit_pos_af(void){return test("%#.4X", 5263);}
+ int X_prec_nofit_pos_af(void){return test("%#.3X", 938862);}
 //Hex uppers (altform) with zero field width padding
-int X_zp_pos_fits_af(void){return test("%#05X", 43);}
-int X_zp_zero_fits_af(void){return test("%#03X", 0);}
-int X_zp_pos_exactfit_af(void){return test("%#03X", 698334);}
+ int X_zp_pos_fits_af(void){return test("%#05X", 43);}
+ int X_zp_zero_fits_af(void){return test("%#03X", 0);}
+ int X_zp_pos_exactfit_af(void){return test("%#03X", 698334);}
 //Hex uppers (altform) with field width and precision
-int X_prec_width_fit_fit_pos_af(void){return test("%#8.5X", 34);}
-int X_prec_width_fit_fit_zero_af(void){return test("%#8.5X", 0);}
-int X_prec_width_nofit_fit_pos_af(void){return test("%#8.3X", 8375);}
-int X_prec_width_fit_nofit_pos_af(void){return test("%#2.7X", 3267);}
-int X_prec_width_nofit_nofit_pos_af(void){return test("%#3.3X", 6983);}
+ int X_prec_width_fit_fit_pos_af(void){return test("%#8.5X", 34);}
+ int X_prec_width_fit_fit_zero_af(void){return test("%#8.5X", 0);}
+ int X_prec_width_nofit_fit_pos_af(void){return test("%#8.3X", 8375);}
+ int X_prec_width_fit_nofit_pos_af(void){return test("%#2.7X", 3267);}
+ int X_prec_width_nofit_nofit_pos_af(void){return test("%#3.3X", 6983);}
 //Hex uppers (altform) with field width and precision, left-justified
-int X_prec_width_fit_fit_pos_lj_af(void){return test("%#-8.5X", 34);}
-int X_prec_width_fit_fit_zero_lj_af(void){return test("%#-8.5X", 0);}
-int X_prec_width_nofit_fit_pos_lj_af(void){return test("%#-8.3X", 8375);}
-int X_prec_width_fit_nofit_pos_lj_af(void){return test("%#-2.7X", 3267);}
-int X_prec_width_nofit_nofit_pos_lj_af(void){return test("%#-3.3X", 6983);}
+ int X_prec_width_fit_fit_pos_lj_af(void){return test("%#-8.5X", 34);}
+ int X_prec_width_fit_fit_zero_lj_af(void){return test("%#-8.5X", 0);}
+ int X_prec_width_nofit_fit_pos_lj_af(void){return test("%#-8.3X", 8375);}
+ int X_prec_width_fit_nofit_pos_lj_af(void){return test("%#-2.7X", 3267);}
+ int X_prec_width_nofit_nofit_pos_lj_af(void){return test("%#-3.3X", 6983);}
 //Hex uppers (altform) with field width and precision with zeropadding
-int X_prec_width_ff_pos_zp_af(void){return test("%#08.5X", 34);}
-int X_prec_width_ff_zero_zp_af(void){return test("%#08.5X", 0);}
-int X_prec_width_nf_pos_zp_af(void){return test("%#08.3X", 8375);}
-int X_prec_width_fn_pos_zp_af(void){return test("%#02.7X", 3267);}
-int X_prec_width_nn_pos_zp_af(void){return test("%#03.3X", 6983);}
+ int X_prec_width_ff_pos_zp_af(void){return test("%#08.5X", 34);}
+ int X_prec_width_ff_zero_zp_af(void){return test("%#08.5X", 0);}
+ int X_prec_width_nf_pos_zp_af(void){return test("%#08.3X", 8375);}
+ int X_prec_width_fn_pos_zp_af(void){return test("%#02.7X", 3267);}
+ int X_prec_width_nn_pos_zp_af(void){return test("%#03.3X", 6983);}
 //Hex uppers (altform) with field width and precision, left-justified with zeropadding
-int X_prec_width_ff_pos_ljzpaf_ignoreflag(void){return test("%#0-8.5X", 34);}
-int X_prec_width_ff_zero_ljzpaf_ignoreflag(void){return test("%#0-8.5X", 0);}
-int X_prec_width_nf_pos_ljzpaf_ignoreflag(void){return test("%#0-8.3X", 8375);}
-int X_prec_width_fn_pos_ljzpaf_ignoreflag(void){return test("%#0-2.7X", 3267);}
-int X_prec_width_nn_pos_ljzpaf_ignoreflag(void){return test("%#0-3.3X", 6983);}
+ int X_prec_width_ff_pos_ljzpaf_ignoreflag(void){return test("%#0-8.5X", 34);}
+ int X_prec_width_ff_zero_ljzpaf_ignoreflag(void){return test("%#0-8.5X", 0);}
+ int X_prec_width_nf_pos_ljzpaf_ignoreflag(void){return test("%#0-8.3X", 8375);}
+ int X_prec_width_fn_pos_ljzpaf_ignoreflag(void){return test("%#0-2.7X", 3267);}
+ int X_prec_width_nn_pos_ljzpaf_ignoreflag(void){return test("%#0-3.3X", 6983);}
 //Hex uppers (altform) of varying size modifiers
-int X_size_hh_pos_casted_af(void){return test("%#hhX", (unsigned char)45);}
-int X_size_h_pos_casted_af(void){return test("%#hX", (unsigned short)385);}
-int X_size_l_pos_casted_af(void){return test("%#lX", (unsigned long)32);}
-int X_size_ll_pos_casted_af(void){return test("%#llX", (long long)43);}
-int X_size_hh_pos_ref_af(void){return test("%#hhX", uch_pos_1);}
-int X_size_h_pos_ref_af(void){return test("%#hX", ush_pos_1);}
-int X_size_l_pos_ref_af(void){return test("%#lX", ul_pos_1);}
-int X_size_ll_pos_ref_af(void){return test("%#llX", ull_pos_1);}
-int X_size_l_pos_big_af(void){return test("%#lX", 22337203685477ul);}
-int X_size_ll_pos_big_af(void){return test("%#llX", 522337203685470ull);}
-int X_ullmax_af(void){return test("%#llX", ullmax);}
-int X_ulmax_af(void){return test("%#lX", ulmax);}
-int X_uhmax_af(void){return test("%#hX", (unsigned short)65535);}
-int X_uhhmax_af(void){return test("%#hhX", (unsigned char)255);}
+ int X_size_hh_pos_casted_af(void){return test("%#hhX", (unsigned char)45);}
+ int X_size_h_pos_casted_af(void){return test("%#hX", (unsigned short)385);}
+ int X_size_l_pos_casted_af(void){return test("%#lX", (unsigned long)32);}
+ int X_size_ll_pos_casted_af(void){return test("%#llX", (long long)43);}
+ int X_size_hh_pos_ref_af(void){return test("%#hhX", uch_pos_1);}
+ int X_size_h_pos_ref_af(void){return test("%#hX", ush_pos_1);}
+ int X_size_l_pos_ref_af(void){return test("%#lX", ul_pos_1);}
+ int X_size_ll_pos_ref_af(void){return test("%#llX", ull_pos_1);}
+ int X_size_l_pos_big_af(void){return test("%#lX", 22337203685477ul);}
+ int X_size_ll_pos_big_af(void){return test("%#llX", 522337203685470ull);}
+ int X_ullmax_af(void){return test("%#llX", ullmax);}
+ int X_ulmax_af(void){return test("%#lX", ulmax);}
+ int X_uhmax_af(void){return test("%#hX", (unsigned short)65535);}
+ int X_uhhmax_af(void){return test("%#hhX", (unsigned char)255);}
 //Hex uppers (altform) of varying size modifiers with some other modifiers
-int X_size_l_pos_big_zp_af(void){return test("%#037lX", 22337203685477ul);}
-int X_size_ll_pos_big_width_af(void){return test("%#37llX", 522337203685470ull);}
+ int X_size_l_pos_big_zp_af(void){return test("%#037lX", 22337203685477ul);}
+ int X_size_ll_pos_big_width_af(void){return test("%#37llX", 522337203685470ull);}
 //Multiple Hex uppers (altform) in a row of varying sizes
-int X_size_ll_hh_ll_af(void){return test("%llu%hhu%#llX", ull_pos_1, uch_pos_1, ull_pos_1);}
-int X_size_h_l_hh_af(void){return test("%#hx%lu%#hhX", ush_pos_1, ul_pos_1, uch_pos_1);}
-int X_size_l_hh_h_af(void){return test("%lu%hhu%#hX", ul_pos_1, uch_pos_1, ush_pos_1);}
-int X_size_n_ll_hh_af(void){return test("%#x%llu%#hhX", ui_pos_1, ull_pos_1, uch_pos_1);}
-int X_size_ll_n_l_af(void){return test("%#llx%u%#lX", ull_pos_1, ui_pos_1, ul_pos_1);}
+ int X_size_ll_hh_ll_af(void){return test("%llu%hhu%#llX", ull_pos_1, uch_pos_1, ull_pos_1);}
+ int X_size_h_l_hh_af(void){return test("%#hx%lu%#hhX", ush_pos_1, ul_pos_1, uch_pos_1);}
+ int X_size_l_hh_h_af(void){return test("%lu%hhu%#hX", ul_pos_1, uch_pos_1, ush_pos_1);}
+ int X_size_n_ll_hh_af(void){return test("%#x%llu%#hhX", ui_pos_1, ull_pos_1, uch_pos_1);}
+ int X_size_ll_n_l_af(void){return test("%#llx%u%#lX", ull_pos_1, ui_pos_1, ul_pos_1);}
 //Hexadecimal uppers - zero precision zero value
-int X_prec0val0_basic(void){return test("%.0X", 0);}
-int X_prec0val0_implicit(void){return test("%.X", 0);}
-int X_prec0val0_w(void){return test("%5.0X", 0);}
-int X_prec0val0_w_impl(void){return test("%5.X", 0);}
-int X_prec0val0_wlj(void){return test("%-5.0X", 0);}
-int X_prec0val0_wlj_impl(void){return test("%-5.X", 0);}
-int X_prec0val0_af(void){return test("%#.0X", 0);}
-int X_prec0val0_af_impl(void){return test("%#.X", 0);}
-int X_prec0val0_waf(void){return test("%#5.0X", 0);}
-int X_prec0val0_waf_impl(void){return test("%#5.X", 0);}
-int X_prec0val0_waflj(void){return test("%#-5.0X", 0);}
-int X_prec0val0_waflj_impl(void){return test("%#-5.X", 0);}
+ int X_prec0val0_basic(void){return test("%.0X", 0);}
+ int X_prec0val0_implicit(void){return test("%.X", 0);}
+ int X_prec0val0_w(void){return test("%5.0X", 0);}
+ int X_prec0val0_w_impl(void){return test("%5.X", 0);}
+ int X_prec0val0_wlj(void){return test("%-5.0X", 0);}
+ int X_prec0val0_wlj_impl(void){return test("%-5.X", 0);}
+ int X_prec0val0_af(void){return test("%#.0X", 0);}
+ int X_prec0val0_af_impl(void){return test("%#.X", 0);}
+ int X_prec0val0_waf(void){return test("%#5.0X", 0);}
+ int X_prec0val0_waf_impl(void){return test("%#5.X", 0);}
+ int X_prec0val0_waflj(void){return test("%#-5.0X", 0);}
+ int X_prec0val0_waflj_impl(void){return test("%#-5.X", 0);}
 
 
 //Octals - no modifers
-int o_basic_octl_pos(void){return test("this %o number", 17);}
-int o_basic_octl_zero(void){return test("this %o number", 0);}
-int o_basic_octl_onlypos(void){return test("%o", 3);}
-int o_octlmax(void){return test("%o", 4294967295u);}
+ int o_basic_octl_pos(void){return test("this %o number", 17);}
+ int o_basic_octl_zero(void){return test("this %o number", 0);}
+ int o_basic_octl_onlypos(void){return test("%o", 3);}
+ int o_octlmax(void){return test("%o", 4294967295u);}
 //Octals with field width
-int o_width_pos_fits(void){return test("%7o", 33);}
-int o_width_zero_fits(void){return test("%3o", 0);}
-int o_width_pos_exactfit(void){return test("%6o", 52625);}
-int o_width_pos_nofit(void){return test("%2o", 94827);}
-int o_width_pos_fits_lj(void){return test("%-7o", 33);}
-int o_width_zero_fits_lj(void){return test("%-3o", 0);}
-int o_width_pos_exactfit_lj(void){return test("%-6o", 52625);}
-int o_width_pos_nofit_lj(void){return test("%-4o", 9648627);}
+ int o_width_pos_fits(void){return test("%7o", 33);}
+ int o_width_zero_fits(void){return test("%3o", 0);}
+ int o_width_pos_exactfit(void){return test("%6o", 52625);}
+ int o_width_pos_nofit(void){return test("%2o", 94827);}
+ int o_width_pos_fits_lj(void){return test("%-7o", 33);}
+ int o_width_zero_fits_lj(void){return test("%-3o", 0);}
+ int o_width_pos_exactfit_lj(void){return test("%-6o", 52625);}
+ int o_width_pos_nofit_lj(void){return test("%-4o", 9648627);}
 //Octals with precision
-int o_prec_fits_pos(void){return test("%.5o", 21);}
-int o_prec_fits_zero(void){return test("%.3o", 0);}
-int o_prec_exactfit_pos(void){return test("%.5o", 5263);}
-int o_prec_nofit_pos(void){return test("%.3o", 938862);}
+ int o_prec_fits_pos(void){return test("%.5o", 21);}
+ int o_prec_fits_zero(void){return test("%.3o", 0);}
+ int o_prec_exactfit_pos(void){return test("%.5o", 5263);}
+ int o_prec_nofit_pos(void){return test("%.3o", 938862);}
 //Octals with zero field width padding
-int o_zp_pos_fits(void){return test("%05o", 43);}
-int o_zp_zero_fits(void){return test("%03o", 0);}
-int o_zp_pos_exactfit(void){return test("%07o", 698334);}
+ int o_zp_pos_fits(void){return test("%05o", 43);}
+ int o_zp_zero_fits(void){return test("%03o", 0);}
+ int o_zp_pos_exactfit(void){return test("%07o", 698334);}
 //Octals with field width and precision
-int o_prec_width_fit_fit_pos(void){return test("%8.5o", 34);}
-int o_prec_width_fit_fit_zero(void){return test("%8.5o", 0);}
-int o_prec_width_nofit_fit_pos(void){return test("%8.3o", 8375);}
-int o_prec_width_fit_nofit_pos(void){return test("%2.7o", 3267);}
-int o_prec_width_nofit_nofit_pos(void){return test("%3.3o", 6983);}
+ int o_prec_width_fit_fit_pos(void){return test("%8.5o", 34);}
+ int o_prec_width_fit_fit_zero(void){return test("%8.5o", 0);}
+ int o_prec_width_nofit_fit_pos(void){return test("%8.3o", 8375);}
+ int o_prec_width_fit_nofit_pos(void){return test("%2.7o", 3267);}
+ int o_prec_width_nofit_nofit_pos(void){return test("%3.3o", 6983);}
 //Octals with field width and precision, left-justified
-int o_prec_width_fit_fit_pos_lj(void){return test("%-8.5o", 34);}
-int o_prec_width_fit_fit_zero_lj(void){return test("%-8.5o", 0);}
-int o_prec_width_nofit_fit_pos_lj(void){return test("%-8.3o", 8375);}
-int o_prec_width_fit_nofit_pos_lj(void){return test("%-2.7o", 3267);}
-int o_prec_width_nofit_nofit_pos_lj(void){return test("%-3.3o", 6983);}
+ int o_prec_width_fit_fit_pos_lj(void){return test("%-8.5o", 34);}
+ int o_prec_width_fit_fit_zero_lj(void){return test("%-8.5o", 0);}
+ int o_prec_width_nofit_fit_pos_lj(void){return test("%-8.3o", 8375);}
+ int o_prec_width_fit_nofit_pos_lj(void){return test("%-2.7o", 3267);}
+ int o_prec_width_nofit_nofit_pos_lj(void){return test("%-3.3o", 6983);}
 //Octals with field width and precision with zeropadding
-int o_prec_width_ff_pos_zp(void){return test("%08.5o", 34);}
-int o_prec_width_ff_zero_zp(void){return test("%08.5o", 0);}
-int o_prec_width_nf_pos_zp(void){return test("%08.3o", 8375);}
-int o_prec_width_fn_pos_zp(void){return test("%02.7o", 3267);}
-int o_prec_width_nn_pos_zp(void){return test("%03.3o", 6983);}
+ int o_prec_width_ff_pos_zp(void){return test("%08.5o", 34);}
+ int o_prec_width_ff_zero_zp(void){return test("%08.5o", 0);}
+ int o_prec_width_nf_pos_zp(void){return test("%08.3o", 8375);}
+ int o_prec_width_fn_pos_zp(void){return test("%02.7o", 3267);}
+ int o_prec_width_nn_pos_zp(void){return test("%03.3o", 6983);}
 //Octals with field width and precision, left-justified with zeropadding
-int o_prec_width_ff_pos_ljzp_ignoreflag(void){return test("%0-8.5o", 34);}
-int o_prec_width_ff_zero_ljzp_ignoreflag(void){return test("%0-8.5o", 0);}
-int o_prec_width_nf_pos_ljzp_ignoreflag(void){return test("%0-8.3o", 8375);}
-int o_prec_width_fn_pos_ljzp_ignoreflag(void){return test("%0-2.7o", 3267);}
-int o_prec_width_nn_pos_ljzp_ignoreflag(void){return test("%0-3.3o", 6983);}
+ int o_prec_width_ff_pos_ljzp_ignoreflag(void){return test("%0-8.5o", 34);}
+ int o_prec_width_ff_zero_ljzp_ignoreflag(void){return test("%0-8.5o", 0);}
+ int o_prec_width_nf_pos_ljzp_ignoreflag(void){return test("%0-8.3o", 8375);}
+ int o_prec_width_fn_pos_ljzp_ignoreflag(void){return test("%0-2.7o", 3267);}
+ int o_prec_width_nn_pos_ljzp_ignoreflag(void){return test("%0-3.3o", 6983);}
 //Octals of varying size modifiers
-int o_size_hh_pos_casted(void){return test("%hho", (unsigned char)45);}
-int o_size_h_pos_casted(void){return test("%ho", (unsigned short)385);}
-int o_size_l_pos_casted(void){return test("%lo", (unsigned long)32);}
-int o_size_ll_pos_casted(void){return test("%llo", (long long)43);}
-int o_size_hh_pos_ref(void){return test("%hho", uch_pos_1);}
-int o_size_h_pos_ref(void){return test("%ho", ush_pos_1);}
-int o_size_l_pos_ref(void){return test("%lo", ul_pos_1);}
-int o_size_ll_pos_ref(void){return test("%llo", ull_pos_1);}
-int o_size_l_pos_big(void){return test("%lo", 22337203685477ul);}
-int o_size_ll_pos_big(void){return test("%llo", 522337203685470ull);}
-int o_ullmax(void){return test("%llo", ullmax);}
-int o_ulmax(void){return test("%lo", ulmax);}
-int o_uhmax(void){return test("%ho", (unsigned short)65535);}
-int o_uhhmax(void){return test("%hho", (unsigned char)255);}
+ int o_size_hh_pos_casted(void){return test("%hho", (unsigned char)45);}
+ int o_size_h_pos_casted(void){return test("%ho", (unsigned short)385);}
+ int o_size_l_pos_casted(void){return test("%lo", (unsigned long)32);}
+ int o_size_ll_pos_casted(void){return test("%llo", (long long)43);}
+ int o_size_hh_pos_ref(void){return test("%hho", uch_pos_1);}
+ int o_size_h_pos_ref(void){return test("%ho", ush_pos_1);}
+ int o_size_l_pos_ref(void){return test("%lo", ul_pos_1);}
+ int o_size_ll_pos_ref(void){return test("%llo", ull_pos_1);}
+ int o_size_l_pos_big(void){return test("%lo", 22337203685477ul);}
+ int o_size_ll_pos_big(void){return test("%llo", 522337203685470ull);}
+ int o_ullmax(void){return test("%llo", ullmax);}
+ int o_ulmax(void){return test("%lo", ulmax);}
+ int o_uhmax(void){return test("%ho", (unsigned short)65535);}
+ int o_uhhmax(void){return test("%hho", (unsigned char)255);}
 //Octals of varying size modifiers with some other modifiers
-int o_size_l_pos_big_zp(void){return test("%037lo", 22337203685477ul);}
-int o_size_ll_pos_big_width(void){return test("%37llo", 522337203685470ull);}
+ int o_size_l_pos_big_zp(void){return test("%037lo", 22337203685477ul);}
+ int o_size_ll_pos_big_width(void){return test("%37llo", 522337203685470ull);}
 //Multiple Octals in a row of varying sizes
-int o_size_ll_hh_ll(void){return test("%llu%hhu%llo", ull_pos_1, uch_pos_1, ull_pos_1);}
-int o_size_h_l_hh(void){return test("%hu%lu%hho", ush_pos_1, ul_pos_1, uch_pos_1);}
-int o_size_l_hh_h(void){return test("%lu%hhu%ho", ul_pos_1, uch_pos_1, ush_pos_1);}
-int o_size_n_ll_hh(void){return test("%u%llu%hho", ui_pos_1, ull_pos_1, uch_pos_1);}
-int o_size_ll_n_l(void){return test("%llu%u%lo", ull_pos_1, ui_pos_1, ul_pos_1);}
+ int o_size_ll_hh_ll(void){return test("%llu%hhu%llo", ull_pos_1, uch_pos_1, ull_pos_1);}
+ int o_size_h_l_hh(void){return test("%hu%lu%hho", ush_pos_1, ul_pos_1, uch_pos_1);}
+ int o_size_l_hh_h(void){return test("%lu%hhu%ho", ul_pos_1, uch_pos_1, ush_pos_1);}
+ int o_size_n_ll_hh(void){return test("%u%llu%hho", ui_pos_1, ull_pos_1, uch_pos_1);}
+ int o_size_ll_n_l(void){return test("%llu%u%lo", ull_pos_1, ui_pos_1, ul_pos_1);}
 //Octal (Altform)s - no modifers
-int o_basic_octl_pos_af(void){return test("this %#o number", 17);}
-int o_basic_octl_zero_af(void){return test("this %#o number", 0);}
-int o_basic_octl_onlypos_af(void){return test("%#o", 3);}
-int o_octlmax_af(void){return test("%#o", 4294967295u);}
+ int o_basic_octl_pos_af(void){return test("this %#o number", 17);}
+ int o_basic_octl_zero_af(void){return test("this %#o number", 0);}
+ int o_basic_octl_onlypos_af(void){return test("%#o", 3);}
+ int o_octlmax_af(void){return test("%#o", 4294967295u);}
 //Octal (Altform)s with field width
-int o_width_pos_fits_af(void){return test("%#7o", 33);}
-int o_width_zero_fits_af(void){return test("%#3o", 0);}
-int o_width_pos_exactfit_af(void){return test("%#6o", 52625);}
-int o_width_pos_nofit_af(void){return test("%#2o", 94827);}
-int o_width_pos_fits_lj_af(void){return test("%#-7o", 33);}
-int o_width_zero_fits_lj_af(void){return test("%#-3o", 0);}
-int o_width_pos_exactfit_lj_af(void){return test("%#-6o", 52625);}
-int o_width_pos_nofit_lj_af(void){return test("%#-4o", 9648627);}
+ int o_width_pos_fits_af(void){return test("%#7o", 33);}
+ int o_width_zero_fits_af(void){return test("%#3o", 0);}
+ int o_width_pos_exactfit_af(void){return test("%#6o", 52625);}
+ int o_width_pos_nofit_af(void){return test("%#2o", 94827);}
+ int o_width_pos_fits_lj_af(void){return test("%#-7o", 33);}
+ int o_width_zero_fits_lj_af(void){return test("%#-3o", 0);}
+ int o_width_pos_exactfit_lj_af(void){return test("%#-6o", 52625);}
+ int o_width_pos_nofit_lj_af(void){return test("%#-4o", 9648627);}
 //Octal (Altform)s with precision
-int o_prec_fits_pos_af(void){return test("%#.5o", 21);}
-int o_prec_fits_zero_af(void){return test("%#.3o", 0);}
-int o_prec_exactfit_pos_af(void){return test("%#.5o", 5263);}
-int o_prec_nofit_pos_af(void){return test("%#.3o", 938862);}
+ int o_prec_fits_pos_af(void){return test("%#.5o", 21);}
+ int o_prec_fits_zero_af(void){return test("%#.3o", 0);}
+ int o_prec_exactfit_pos_af(void){return test("%#.5o", 5263);}
+ int o_prec_nofit_pos_af(void){return test("%#.3o", 938862);}
 //Octal (Altform)s with zero field width padding
-int o_zp_pos_fits_af(void){return test("%#05o", 43);}
-int o_zp_zero_fits_af(void){return test("%#03o", 0);}
-int o_zp_pos_exactfit_af(void){return test("%#07o", 698334);}
+ int o_zp_pos_fits_af(void){return test("%#05o", 43);}
+ int o_zp_zero_fits_af(void){return test("%#03o", 0);}
+ int o_zp_pos_exactfit_af(void){return test("%#07o", 698334);}
 //Octal (Altform)s with field width and precision
-int o_prec_width_fit_fit_pos_af(void){return test("%#8.5o", 34);}
-int o_prec_width_fit_fit_zero_af(void){return test("%#8.5o", 0);}
-int o_prec_width_nofit_fit_pos_af(void){return test("%#8.3o", 8375);}
-int o_prec_width_fit_nofit_pos_af(void){return test("%#2.7o", 3267);}
-int o_prec_width_nofit_nofit_pos_af(void){return test("%#3.3o", 6983);}
+ int o_prec_width_fit_fit_pos_af(void){return test("%#8.5o", 34);}
+ int o_prec_width_fit_fit_zero_af(void){return test("%#8.5o", 0);}
+ int o_prec_width_nofit_fit_pos_af(void){return test("%#8.3o", 8375);}
+ int o_prec_width_fit_nofit_pos_af(void){return test("%#2.7o", 3267);}
+ int o_prec_width_nofit_nofit_pos_af(void){return test("%#3.3o", 6983);}
 //Octal (Altform)s with field width and precision, left-justified
-int o_prec_width_fit_fit_pos_lj_af(void){return test("%#-8.5o", 34);}
-int o_prec_width_fit_fit_zero_lj_af(void){return test("%#-8.5o", 0);}
-int o_prec_width_nofit_fit_pos_lj_af(void){return test("%#-8.3o", 8375);}
-int o_prec_width_fit_nofit_pos_lj_af(void){return test("%#-2.7o", 3267);}
-int o_prec_width_nofit_nofit_pos_lj_af(void){return test("%#-3.3o", 6983);}
+ int o_prec_width_fit_fit_pos_lj_af(void){return test("%#-8.5o", 34);}
+ int o_prec_width_fit_fit_zero_lj_af(void){return test("%#-8.5o", 0);}
+ int o_prec_width_nofit_fit_pos_lj_af(void){return test("%#-8.3o", 8375);}
+ int o_prec_width_fit_nofit_pos_lj_af(void){return test("%#-2.7o", 3267);}
+ int o_prec_width_nofit_nofit_pos_lj_af(void){return test("%#-3.3o", 6983);}
 //Octal (Altform)s with field width and precision with zeropadding
-int o_prec_width_ff_pos_zp_af(void){return test("%#08.5o", 34);}
-int o_prec_width_ff_zero_zp_af(void){return test("%#08.5o", 0);}
-int o_prec_width_nf_pos_zp_af(void){return test("%#08.3o", 8375);}
-int o_prec_width_fn_pos_zp_af(void){return test("%#02.7o", 3267);}
-int o_prec_width_nn_pos_zp_af(void){return test("%#03.3o", 6983);}
+ int o_prec_width_ff_pos_zp_af(void){return test("%#08.5o", 34);}
+ int o_prec_width_ff_zero_zp_af(void){return test("%#08.5o", 0);}
+ int o_prec_width_nf_pos_zp_af(void){return test("%#08.3o", 8375);}
+ int o_prec_width_fn_pos_zp_af(void){return test("%#02.7o", 3267);}
+ int o_prec_width_nn_pos_zp_af(void){return test("%#03.3o", 6983);}
 //Octal (Altform)s with field width and precision, left-justified with zeropadding
-int o_prec_width_ff_pos_ljzpaf_ignoreflag(void){return test("%#0-8.5o", 34);}
-int o_prec_width_ff_zero_ljzpaf_ignoreflag(void){return test("%#0-8.5o", 0);}
-int o_prec_width_nf_pos_ljzpaf_ignoreflag(void){return test("%#0-8.3o", 8375);}
-int o_prec_width_fn_pos_ljzpaf_ignoreflag(void){return test("%#0-2.7o", 3267);}
-int o_prec_width_nn_pos_ljzpaf_ignoreflag(void){return test("%#0-3.3o", 6983);}
+ int o_prec_width_ff_pos_ljzpaf_ignoreflag(void){return test("%#0-8.5o", 34);}
+ int o_prec_width_ff_zero_ljzpaf_ignoreflag(void){return test("%#0-8.5o", 0);}
+ int o_prec_width_nf_pos_ljzpaf_ignoreflag(void){return test("%#0-8.3o", 8375);}
+ int o_prec_width_fn_pos_ljzpaf_ignoreflag(void){return test("%#0-2.7o", 3267);}
+ int o_prec_width_nn_pos_ljzpaf_ignoreflag(void){return test("%#0-3.3o", 6983);}
 //Octal (Altform)s of varying size modifiers
-int o_size_hh_pos_casted_af(void){return test("%#hho", (unsigned char)45);}
-int o_size_h_pos_casted_af(void){return test("%#ho", (unsigned short)385);}
-int o_size_l_pos_casted_af(void){return test("%#lo", (unsigned long)32);}
-int o_size_ll_pos_casted_af(void){return test("%#llo", (long long)43);}
-int o_size_hh_pos_ref_af(void){return test("%#hho", uch_pos_1);}
-int o_size_h_pos_ref_af(void){return test("%#ho", ush_pos_1);}
-int o_size_l_pos_ref_af(void){return test("%#lo", ul_pos_1);}
-int o_size_ll_pos_ref_af(void){return test("%#llo", ull_pos_1);}
-int o_size_l_pos_big_af(void){return test("%#lo", 22337203685477ul);}
-int o_size_ll_pos_big_af(void){return test("%#llo", 522337203685470ull);}
-int o_ullmax_af(void){return test("%#llo", ullmax);}
-int o_ulmax_af(void){return test("%#lo", ulmax);}
-int o_uhmax_af(void){return test("%#ho", (unsigned short)65535);}
-int o_uhhmax_af(void){return test("%#hho", (unsigned char)255);}
+ int o_size_hh_pos_casted_af(void){return test("%#hho", (unsigned char)45);}
+ int o_size_h_pos_casted_af(void){return test("%#ho", (unsigned short)385);}
+ int o_size_l_pos_casted_af(void){return test("%#lo", (unsigned long)32);}
+ int o_size_ll_pos_casted_af(void){return test("%#llo", (long long)43);}
+ int o_size_hh_pos_ref_af(void){return test("%#hho", uch_pos_1);}
+ int o_size_h_pos_ref_af(void){return test("%#ho", ush_pos_1);}
+ int o_size_l_pos_ref_af(void){return test("%#lo", ul_pos_1);}
+ int o_size_ll_pos_ref_af(void){return test("%#llo", ull_pos_1);}
+ int o_size_l_pos_big_af(void){return test("%#lo", 22337203685477ul);}
+ int o_size_ll_pos_big_af(void){return test("%#llo", 522337203685470ull);}
+ int o_ullmax_af(void){return test("%#llo", ullmax);}
+ int o_ulmax_af(void){return test("%#lo", ulmax);}
+ int o_uhmax_af(void){return test("%#ho", (unsigned short)65535);}
+ int o_uhhmax_af(void){return test("%#hho", (unsigned char)255);}
 //Octal (Altform)s of varying size modifiers with some other modifiers
-int o_size_l_pos_big_zp_af(void){return test("%#037lo", 22337203685477ul);}
-int o_size_ll_pos_big_width_af(void){return test("%#37llo", 522337203685470ull);}
+ int o_size_l_pos_big_zp_af(void){return test("%#037lo", 22337203685477ul);}
+ int o_size_ll_pos_big_width_af(void){return test("%#37llo", 522337203685470ull);}
 //Multiple Octal (Altform)s in a row of varying sizes
-int o_size_ll_hh_ll_af(void){return test("%llu%hhu%#llo", ull_pos_1, uch_pos_1, ull_pos_1);}
-int o_size_h_l_hh_af(void){return test("%hu%lu%#hho", ush_pos_1, ul_pos_1, uch_pos_1);}
-int o_size_l_hh_h_af(void){return test("%#lo%hhu%#ho", ul_pos_1, uch_pos_1, ush_pos_1);}
-int o_size_n_ll_hh_af(void){return test("%#o%llu%hho", ui_pos_1, ull_pos_1, uch_pos_1);}
-int o_size_ll_n_l_af(void){return test("%#llo%u%#lo", ull_pos_1, ui_pos_1, ul_pos_1);}
+ int o_size_ll_hh_ll_af(void){return test("%llu%hhu%#llo", ull_pos_1, uch_pos_1, ull_pos_1);}
+ int o_size_h_l_hh_af(void){return test("%hu%lu%#hho", ush_pos_1, ul_pos_1, uch_pos_1);}
+ int o_size_l_hh_h_af(void){return test("%#lo%hhu%#ho", ul_pos_1, uch_pos_1, ush_pos_1);}
+ int o_size_n_ll_hh_af(void){return test("%#o%llu%hho", ui_pos_1, ull_pos_1, uch_pos_1);}
+ int o_size_ll_n_l_af(void){return test("%#llo%u%#lo", ull_pos_1, ui_pos_1, ul_pos_1);}
 //Octals - zero precision zero value
-int o_prec0val0_basic(void){return test("%.0o", 0);}
-int o_prec0val0_implicit(void){return test("%.o", 0);}
-int o_prec0val0_w(void){return test("%5.0o", 0);}
-int o_prec0val0_w_impl(void){return test("%5.o", 0);}
-int o_prec0val0_wlj(void){return test("%-5.0o", 0);}
-int o_prec0val0_wlj_impl(void){return test("%-5.o", 0);}
-int o_prec0val0_af(void){return test("%#.0o", 0);}
-int o_prec0val0_af_impl(void){return test("%#.o", 0);}
-int o_prec0val0_waf(void){return test("%#5.0o", 0);}
-int o_prec0val0_waf_impl(void){return test("%#5.o", 0);}
-int o_prec0val0_waflj(void){return test("%#-5.0o", 0);}
-int o_prec0val0_waflj_impl(void){return test("%#-5.o", 0);}
+ int o_prec0val0_basic(void){return test("%.0o", 0);}
+ int o_prec0val0_implicit(void){return test("%.o", 0);}
+ int o_prec0val0_w(void){return test("%5.0o", 0);}
+ int o_prec0val0_w_impl(void){return test("%5.o", 0);}
+ int o_prec0val0_wlj(void){return test("%-5.0o", 0);}
+ int o_prec0val0_wlj_impl(void){return test("%-5.o", 0);}
+ int o_prec0val0_af(void){return test("%#.0o", 0);}
+ int o_prec0val0_af_impl(void){return test("%#.o", 0);}
+ int o_prec0val0_waf(void){return test("%#5.0o", 0);}
+ int o_prec0val0_waf_impl(void){return test("%#5.o", 0);}
+ int o_prec0val0_waflj(void){return test("%#-5.0o", 0);}
+ int o_prec0val0_waflj_impl(void){return test("%#-5.o", 0);}
 
 
 //Pointers - Basic
@@ -3430,301 +3430,301 @@ static int ncm_p = 5;
 
 //Moulinette tests
 
- int		moul_s_1(void){return test(" pouet %s !!", "camembert");}
+int		moul_s_1(void){return test(" pouet %s !!", "camembert");}
 
- int		moul_s_2(void){return test("%s !", "Ceci n'est pas un \0 exercice !");}
- int		moul_s_3(void){return test("%s!", "Ceci n'est toujours pas un exercice !");}
- int		moul_s_4(void){char *str = NULL; return test("%s!", str);}
+int		moul_s_2(void){return test("%s !", "Ceci n'est pas un \0 exercice !");}
+int		moul_s_3(void){return test("%s!", "Ceci n'est toujours pas un exercice !");}
+int		moul_s_4(void){char *str = NULL; return test("%s!", str);}
 
- int		moul_s_5_this_ones_a_doozy(void){return test("%s", 
+int		moul_s_5_this_ones_a_doozy(void){return test("%s", 
 		"Lesenfantsnesententpastrestresbonmaiscac'estparcequ'ilsfontcacadansleurculotteetquecen'estvraimentpastrestrespropreNonmongroscoupdecœurc'étaitunsoirde2005,j'étaisinvitéàuneconférenceàLaSorbonnepourparlerdelachansonfrancaiseetdel'écrituredetexteavecpleinsd'autresgens.ParmilesstarsémergentesilyavaitOliviaRuizquietaitentraindedevenirunestaravecsachansonsurlechocolatàlacon.Brefjeelretrouvecoincélorsd'une\"atelierderéflexion\"entreOliviaetRichardCrossquicommençaitàêtrepasmalconnudanslemilieuencemomentàcausedequelquesémissionsdeteréalité.J'aibienrigoleavecOliviaRuizcesoirlà,jeluiparlaitdemonrêved'écritetunechansondepirate,elledelafaçonqu'elleavaitd'écriredeschansons\"commeellessortaient\"etdes'étonnerparfoisqued'autrestrouventcabien.Brefçac'étaitunechouettesoirée/nuitquis'estterminéeauxalentoursde7hdumatinenprenantuncaféauChaidel'AbbayeprèsdeMabillon.Avantqu'ellenedisparaissepourtoujoursdemonexistence.JesuissouventrepasséauChaitôtlematinenespérantlarevoirmaisniet.Rien.JusteChristineScottThomasaperçuunjeudimatinoùilfaisaitchaud.Lesenfantsnesententpastrestresbonmaiscac'estparcequ'ilsfontcacadansleurculotteetquecen'estvraimentpastrestrespropreNonmongroscoupdecœurc'étaitunsoirde2005,j'étaisinvitéàuneconférenceàLaSorbonnepourparlerdelachansonfrancaiseetdel'écrituredetexteavecpleinsd'autresgens.ParmilesstarsémergentesilyavaitOliviaRuizquietaitentraindedevenirunestaravecsachansonsurlechocolatàlacon.Brefjeelretrouvecoincélorsd'une\"atelierderéflexion\"entreOliviaetRichardCrossquicommençaitàêtrepasmalconnudanslemilieuencemomentàcausedequelquesémissionsdeteréalité.J'aibienrigoleavecOliviaRuizcesoirlà,jeluiparlaitdemonrêved'écritetunechansondepirate,elledelafaçonqu'elleavaitd'écriredeschansons\"commeellessortaient\"etdes'étonnerparfoisqued'autrestrouventcabien.Brefçac'étaitunechouettesoirée/nuitquis'estterminéeauxalentoursde7hdumatinenprenantuncaféauChaidel'AbbayeprèsdeMabillon.Avantqu'ellenedisparaissepourtoujoursdemonexistence.JesuissouventrepasséauChaitôtlematinenespérantlarevoirmaisniet.Rien.JusteChristineScottThomasaperçuunjeudimatinoùilfaisaitchaud.Lesenfantsnesententpastrestresbonmaiscac'estparcequ'ilsfontcacadansleurculotteetquecen'estvraimentpastrestrespropreNonmongroscoupdecœurc'étaitunsoirde2005,j'étaisinvitéàuneconférenceàLaSorbonnepourparlerdelachansonfrancaiseetdel'écrituredetexteavecpleinsd'autresgens.ParmilesstarsémergentesilyavaitOliviaRuizquietaitentraindedevenirunestaravecsachansonsurlechocolatàlacon.Brefjeelretrouvecoincélorsd'une\"atelierderéflexion\"entreOliviaetRichardCrossquicommençaitàêtrepasmalconnudanslemilieuencemomentàcausedequelquesémissionsdeteréalité.J'aibienrigoleavecOliviaRuizcesoirlà,jeluiparlaitdemonrêved'écritetunechansondepirate,elledelafaçonqu'elleavaitd'écriredeschansons\"commeellessortaient\"etdes'étonnerparfoisqued'autrestrouventcabien.Brefçac'étaitunechouettesoirée/nuitquis'estterminéeauxalentoursde7hdumatinenprenantuncaféauChaidel'AbbayeprèsdeMabillon.Avantqu'ellenedisparaissepourtoujoursdemonexistence.JesuissouventrepasséauChaitôtlematinenespérantlarevoirmaisniet.Rien.JusteChristineScottThomasaperçuunjeudimatinoùilfaisaitchaud.Lesenfantsnesententpastrestresbonmaiscac'estparcequ'ilsfontcacadansleurculotteetquecen'estvraimentpastrestrespropreNonmongroscoupdecœurc'étaitunsoirde2005,j'étaisinvitéàuneconférenceàLaSorbonnepourparlerdelachansonfrancaiseetdel'écrituredetexteavecpleinsd'autresgens.ParmilesstarsémergentesilyavaitOliviaRuizquietaitentraindedevenirunestaravecsachansonsurlechocolatàlacon.Brefjeelretrouvecoincélorsd'une\"atelierderéflexion\"entreOliviaetRichardCrossquicommençaitàêtrepasmalconnudanslemilieuencemomentàcausedequelquesémissionsdeteréalité.J'aibienrigoleavecOliviaRuizcesoirlà,jeluiparlaitdemonrêved'écritetunechansondepirate,elledelafaçonqu'elleavaitd'écriredeschansons\"commeellessortaient\"etdes'étonnerparfoisqued'autrestrouventcabien.Brefçac'étaitunechouettesoirée/nuitquis'estterminéeauxalentoursde7hdumatinenprenantuncaféauChaidel'AbbayeprèsdeMabillon.Avantqu'ellenedisparaissepourtoujoursdemonexistence.JesuissouventrepasséauChaitôtlematinenespérantlarevoirmaisniet.Rien.JusteChristineScottThomasaperçuunjeudimatinoùilfaisaitchaud.Lesenfantsnesententpastrestresbonmaiscac'estparcequ'ilsfontcacadansleurculotteetquecen'estvraimentpastrestrespropreNonmongroscoupdecœurc'étaitunsoirde2005,j'étaisinvitéàuneconférenceàLaSorbonnepourparlerdelachansonfrancaiseetdel'écrituredetexteavecpleinsd'autresgens.ParmilesstarsémergentesilyavaitOliviaRuizquietaitentraindedevenirunestaravecsachansonsurlechocolatàlacon.Brefjeelretrouvecoincélorsd'une\"atelierderéflexion\"entreOliviaetRichardCrossquicommençaitàêtrepasmalconnudanslemilieuencemomentàcausedequelquesémissionsdeteréalité.J'aibienrigoleavecOliviaRuizcesoirlà,jeluiparlaitdemonrêved'écritetunechansondepirate,elledelafaçonqu'elleavaitd'écriredeschansons\"commeellessortaient\"etdes'étonnerparfoisqued'autrestrouventcabien.Brefçac'étaitunechouettesoirée/nuitquis'estterminéeauxalentoursde7hdumatinenprenantuncaféauChaidel'AbbayeprèsdeMabillon.Avantqu'ellenedisparaissepourtoujoursdemonexistence.JesuissouventrepasséauChaitôtlematinenespérantlarevoirmaisniet.Rien.JusteChristineScottThomasaperçuunjeudimatinoùilfaisaitchaud.Lesenfantsnesententpastrestresbonmaiscac'estparcequ'ilsfontcacadansleurculotteetquecen'estvraimentpastrestrespropreNonmongroscoupdecœurc'étaitunsoirde2005,j'étaisinvitéàuneconférenceàLaSorbonnepourparlerdelachansonfrancaiseetdel'écrituredetexteavecpleinsd'autresgens.ParmilesstarsémergentesilyavaitOliviaRuizquietaitentraindedevenirunestaravecsachansonsurlechocolatàlacon.Brefjeelretrouvecoincélorsd'une\"atelierderéflexion\"entreOliviaetRichardCrossquicommençaitàêtrepasmalconnudanslemilieuencemomentàcausedequelquesémissionsdeteréalité.J'aibienrigoleavecOliviaRuizcesoirlà,jeluiparlaitdemonrêved'écritetunechansondepirate,elledelafaçonqu'elleavaitd'écriredeschansons\"commeellessortaient\"etdes'étonnerparfoisqued'autrestrouventcabien.Brefçac'étaitunechouettesoirée/nuitquis'estterminéeauxalentoursde7hdumatinenprenantuncaféauChaidel'AbbayeprèsdeMabillon.Avantqu'ellenedisparaissepourtoujoursdemonexistence.JesuissouventrepasséauChaitôtlematinenespérantlarevoirmaisniet.Rien.JusteChristineScottThomasaperçuunjeudimatinoùilfaisaitchaud.Lesenfantsnesententpastrestresbonmaiscac'estparcequ'ilsfontcacadansleurculotteetquecen'estvraimentpastrestrespropreNonmongroscoupdecœurc'étaitunsoirde2005,j'étaisinvitéàuneconférenceàLaSorbonnepourparlerdelachansonfrancaiseetdel'écrituredetexteavecpleinsd'autresgens.ParmilesstarsémergentesilyavaitOliviaRuizquietaitentraindedevenirunestaravecsachansonsurlechocolatàlacon.Brefjeelretrouvecoincélorsd'une\"atelierderéflexion\"entreOliviaetRichardCrossquicommençaitàêtrepasmalconnudanslemilieuencemomentàcausedequelquesémissionsdeteréalité.J'aibienrigoleavecOliviaRuizcesoirlà,jeluiparlaitdemonrêved'écritetunechansondepirate,elledelafaçonqu'elleavaitd'écriredeschansons\"commeellessortaient\"etdes'étonnerparfoisqued'autrestrouventcabien.Brefçac'étaitunechouettesoirée/nuitquis'estterminéeauxalentoursde7hdumatinenprenantuncaféauChaidel'AbbayeprèsdeMabillon.Avantqu'ellenedisparaissepourtoujoursdemonexistence.JesuissouventrepasséauChaitôtlematinenespérantlarevoirmaisniet.Rien.JusteChristineScottThomasaperçuunjeudimatinoùilfaisaitchaud.Lesenfantsnesententpastrestresbonmaiscac'estparcequ'ilsfontcacadansleurculotteetquecen'estvraimentpastrestrespropreNonmongroscoupdecœurc'étaitunsoirde2005,j'étaisinvitéàuneconférenceàLaSorbonnepourparlerdelachansonfrancaiseetdel'écrituredetexteavecpleinsd'autresgens.ParmilesstarsémergentesilyavaitOliviaRuizquietaitentraindedevenirunestaravecsachansonsurlechocolatàlacon.Brefjeelretrouvecoincélorsd'une\"atelierderéflexion\"entreOliviaetRichardCrossquicommençaitàêtrepasmalconnudanslemilieuencemomentàcausedequelquesémissionsdeteréalité.J'aibienrigoleavecOliviaRuizcesoirlà,jeluiparlaitdemonrêved'écritetunechansondepirate,elledelafaçonqu'elleavaitd'écriredeschansons\"commeellessortaient\"etdes'étonnerparfoisqued'autrestrouventcabien.Brefçac'étaitunechouettesoirée/nuitquis'estterminéeauxalentoursde7hdumatinenprenantuncaféauChaidel'AbbayeprèsdeMabillon.Avantqu'ellenedisparaissepourtoujoursdemonexistence.JesuissouventrepasséauChaitôtlematinenespérantlarevoirmaisniet.Rien.JusteChristineScottThomasaperçuunjeudimatinoùilfaisaitchaud.Etalafinilla*bip*");}
 
- int moul_d_1(void){return test("%d", 42);}
- int moul_d_2(void){return test("Kashim a %d histoires à raconter", 1001);}
- int moul_d_3(void){return test("Il fait au moins %d\n", -8000);}
- int moul_d_4(void){return test("%d", -0);}
- int moul_d_5(void){return test("%d", 0);}
- int moul_d_6(void){return test("%d", INT_MAX);}
- int moul_d_7(void){return test("%d", INT_MIN);}
- int moul_d_8(void){return test("%d", INT_MIN - 1);}
- int moul_d_9(void){return test("%d", INT_MAX + 1);}
- int moul_d_10(void){return test("%%d 0000042 == |%d|\n", 0000042);}
- int moul_d_11(void){return test("%%d \t == |%d|\n", '\t');}
- int moul_d_12(void){return test("%%d Lydie == |%d|\n", 'L'+'y'+'d'+'i'+'e');}
+int moul_d_1(void){return test("%d", 42);}
+int moul_d_2(void){return test("Kashim a %d histoires à raconter", 1001);}
+int moul_d_3(void){return test("Il fait au moins %d\n", -8000);}
+int moul_d_4(void){return test("%d", -0);}
+int moul_d_5(void){return test("%d", 0);}
+int moul_d_6(void){return test("%d", INT_MAX);}
+int moul_d_7(void){return test("%d", INT_MIN);}
+int moul_d_8(void){return test("%d", INT_MIN - 1);}
+int moul_d_9(void){return test("%d", INT_MAX + 1);}
+int moul_d_10(void){return test("%%d 0000042 == |%d|\n", 0000042);}
+int moul_d_11(void){return test("%%d \t == |%d|\n", '\t');}
+int moul_d_12(void){return test("%%d Lydie == |%d|\n", 'L'+'y'+'d'+'i'+'e');}
 
- int moul_mix_1(void){int r00 = 0; return test("Lalalala, %d%% des gens qui parlent à Ly adorent %s. Ou Presque. %p", 100, "Ly", &r00);}
+int moul_mix_1(void){int r00 = 0; return test("Lalalala, %d%% des gens qui parlent à Ly adorent %s. Ou Presque. %p", 100, "Ly", &r00);}
 
- int moul_c_1(void){return test("%c", 42);}
- int moul_c_2(void){return test("Kashim a %c histoires à raconter", 1001);}
- int moul_c_3(void){return test("Il fait au moins %c\n", -8000);}
- int moul_c_4(void){return test("%c", -0);}
- int moul_c_5(void){return test("%c", 0);}
- int moul_c_5b(void){return test("%c\n", INT_MAX);}
- int moul_c_6(void){return test("%c\n", 'c');}
- int moul_c_7(void){return test("%c\n", '\n');}
- int moul_c_8(void){return test("%c", 'l');}
- int moul_c_9(void){return test("%c", 'y');}
- int moul_c_10(void){return test("%c", ' ');}
- int moul_c_11(void){return test("%c", 'e');}
- int moul_c_12(void){return test("%c", 's');}
- int moul_c_13(void){return test("%c", 't');}
- int moul_c_14(void){return test("%c", ' ');}
- int moul_c_15(void){return test("%c", 'f');}
- int moul_c_16(void){return test("%c", 'a');}
- int moul_c_17(void){return test("%c", 'n');}
- int moul_c_18(void){return test("%c", 't');}
- int moul_c_19(void){return test("%c", 'a');}
- int moul_c_20(void){return test("%c", 's');}
- int moul_c_21(void){return test("%c", 't');}
- int moul_c_22(void){return test("%c", 'i');}
- int moul_c_23(void){return test("%c", 'q');}
- int moul_c_24(void){return test("%c", 'u');}
- int moul_c_25(void){return test("%c", 'e');}
- int moul_c_26(void){return test("%c\n", '!');}
- int moul_c_27(void){return test("%c\n", '\r');}
- int moul_c_28(void){return test("%c\n", '\t');}
+int moul_c_1(void){return test("%c", 42);}
+int moul_c_2(void){return test("Kashim a %c histoires à raconter", 1001);}
+int moul_c_3(void){return test("Il fait au moins %c\n", -8000);}
+int moul_c_4(void){return test("%c", -0);}
+int moul_c_5(void){return test("%c", 0);}
+int moul_c_5b(void){return test("%c\n", INT_MAX);}
+int moul_c_6(void){return test("%c\n", 'c');}
+int moul_c_7(void){return test("%c\n", '\n');}
+int moul_c_8(void){return test("%c", 'l');}
+int moul_c_9(void){return test("%c", 'y');}
+int moul_c_10(void){return test("%c", ' ');}
+int moul_c_11(void){return test("%c", 'e');}
+int moul_c_12(void){return test("%c", 's');}
+int moul_c_13(void){return test("%c", 't');}
+int moul_c_14(void){return test("%c", ' ');}
+int moul_c_15(void){return test("%c", 'f');}
+int moul_c_16(void){return test("%c", 'a');}
+int moul_c_17(void){return test("%c", 'n');}
+int moul_c_18(void){return test("%c", 't');}
+int moul_c_19(void){return test("%c", 'a');}
+int moul_c_20(void){return test("%c", 's');}
+int moul_c_21(void){return test("%c", 't');}
+int moul_c_22(void){return test("%c", 'i');}
+int moul_c_23(void){return test("%c", 'q');}
+int moul_c_24(void){return test("%c", 'u');}
+int moul_c_25(void){return test("%c", 'e');}
+int moul_c_26(void){return test("%c\n", '!');}
+int moul_c_27(void){return test("%c\n", '\r');}
+int moul_c_28(void){return test("%c\n", '\t');}
 
- int moul_ld_1_throwswarning(void){return test("%ld", 42);}
- int moul_ld_2_throwswarning(void){return test("Kashim a %ld histoires à raconter", 1001);}
- int moul_ld_3_throwswarning(void){return test("Il fait au moins %ld\n", -8000);}
- int moul_ld_4_throwswarning(void){return test("%ld", -0);}
- int moul_ld_5_throwswarning(void){return test("%ld", 0);}
- int moul_ld_6_throwswarning(void){return test("%ld", INT_MAX);}
- int moul_ld_7_throwswarning(void){return test("%ld", INT_MIN);}
- int moul_ld_8_throwswarning(void){return test("%ld", INT_MIN - 1);}
- int moul_ld_9_throwswarning(void){return test("%ld", INT_MAX + 1);}
- int moul_ld_10_throwswarning(void){return test("%%ld 0000042 == |%ld|\n", 0000042);}
- int moul_ld_11_throwswarning(void){return test("%%ld \t == |%ld|\n", '\t');}
- int moul_ld_12_throwswarning(void){return test("%%ld Lydie == |%ld|\n", 'L'+'y'+'d'+'i'+'e');}
+int moul_ld_1_throwswarning(void){return test("%ld", 42);}
+int moul_ld_2_throwswarning(void){return test("Kashim a %ld histoires à raconter", 1001);}
+int moul_ld_3_throwswarning(void){return test("Il fait au moins %ld\n", -8000);}
+int moul_ld_4_throwswarning(void){return test("%ld", -0);}
+int moul_ld_5_throwswarning(void){return test("%ld", 0);}
+int moul_ld_6_throwswarning(void){return test("%ld", INT_MAX);}
+int moul_ld_7_throwswarning(void){return test("%ld", INT_MIN);}
+int moul_ld_8_throwswarning(void){return test("%ld", INT_MIN - 1);}
+int moul_ld_9_throwswarning(void){return test("%ld", INT_MAX + 1);}
+int moul_ld_10_throwswarning(void){return test("%%ld 0000042 == |%ld|\n", 0000042);}
+int moul_ld_11_throwswarning(void){return test("%%ld \t == |%ld|\n", '\t');}
+int moul_ld_12_throwswarning(void){return test("%%ld Lydie == |%ld|\n", 'L'+'y'+'d'+'i'+'e');}
 
- int moul_D_1_notmandatory(void){return test("%D", 42);}
- int moul_D_2_notmandatory(void){return test("Kashim a %D histoires à raconter", 1001);}
- int moul_D_3_notmandatory(void){return test("Il fait au moins %D\n", -8000);}
- int moul_D_4_notmandatory(void){return test("%D", -0);}
- int moul_D_5_notmandatory(void){return test("%D", 0);}
- int moul_D_6_notmandatory(void){return test("%D", INT_MAX);}
- int moul_D_7_notmandatory(void){return test("%D", INT_MIN);}
- int moul_D_8_notmandatory(void){return test("%D", INT_MIN - 1);}
- int moul_D_9_notmandatory(void){return test("%D", INT_MAX + 1);}
- int moul_D_10_notmandatory(void){return test("%%D 0000042 == |%D|\n", 0000042);}
- int moul_D_11_notmandatory(void){return test("%%D \t == |%D|\n", '\t');}
- int moul_D_12_notmandatory(void){return test("%%D Lydie == |%D|\n", 'L'+'y'+'d'+'i'+'e');}
+int moul_D_1_notmandatory(void){return test("%D", 42);}
+int moul_D_2_notmandatory(void){return test("Kashim a %D histoires à raconter", 1001);}
+int moul_D_3_notmandatory(void){return test("Il fait au moins %D\n", -8000);}
+int moul_D_4_notmandatory(void){return test("%D", -0);}
+int moul_D_5_notmandatory(void){return test("%D", 0);}
+int moul_D_6_notmandatory(void){return test("%D", INT_MAX);}
+int moul_D_7_notmandatory(void){return test("%D", INT_MIN);}
+int moul_D_8_notmandatory(void){return test("%D", INT_MIN - 1);}
+int moul_D_9_notmandatory(void){return test("%D", INT_MAX + 1);}
+int moul_D_10_notmandatory(void){return test("%%D 0000042 == |%D|\n", 0000042);}
+int moul_D_11_notmandatory(void){return test("%%D \t == |%D|\n", '\t');}
+int moul_D_12_notmandatory(void){return test("%%D Lydie == |%D|\n", 'L'+'y'+'d'+'i'+'e');}
 
- int moul_i_1(void){return test("%i", 42);}
- int moul_i_2(void){return test("Kashim a %i histoires à raconter", 1001);}
- int moul_i_3(void){return test("Il fait au moins %i\n", -8000);}
- int moul_i_4(void){return test("%i", -0);}
- int moul_i_5(void){return test("%i", 0);}
- int moul_i_6(void){return test("%i", INT_MAX);}
- int moul_i_7(void){return test("%i", INT_MIN);}
- int moul_i_8(void){return test("%i", INT_MIN - 1);}
- int moul_i_9(void){return test("%i", INT_MAX + 1);}
- int moul_i_10(void){return test("%%i 0000042 == |%i|\n", 0000042);}
- int moul_i_11(void){return test("%%i \t == |%i|\n", '\t');}
- int moul_i_12(void){return test("%%i Lydie == |%i|\n", 'L'+'y'+'d'+'i'+'e');}
+int moul_i_1(void){return test("%i", 42);}
+int moul_i_2(void){return test("Kashim a %i histoires à raconter", 1001);}
+int moul_i_3(void){return test("Il fait au moins %i\n", -8000);}
+int moul_i_4(void){return test("%i", -0);}
+int moul_i_5(void){return test("%i", 0);}
+int moul_i_6(void){return test("%i", INT_MAX);}
+int moul_i_7(void){return test("%i", INT_MIN);}
+int moul_i_8(void){return test("%i", INT_MIN - 1);}
+int moul_i_9(void){return test("%i", INT_MAX + 1);}
+int moul_i_10(void){return test("%%i 0000042 == |%i|\n", 0000042);}
+int moul_i_11(void){return test("%%i \t == |%i|\n", '\t');}
+int moul_i_12(void){return test("%%i Lydie == |%i|\n", 'L'+'y'+'d'+'i'+'e');}
 
- int moul_f_1(void){return test("%f", (double)42);}
- int moul_f_2(void){return test("Kashim a %f histoires à raconter", (double)1001);}
- int moul_f_3(void){return test("Il fait au moins %f\n", (double)-8000);}
- int moul_f_4(void){return test("%f", (double)-0);}
- int moul_f_5(void){return test("%f", (double)0);}
- int moul_f_6(void){return test("%f", (double)INT_MAX);}
- int moul_f_7(void){return test("%f", (double)INT_MIN);}
- int moul_f_7b(void){return test("%f", (double)INT_MIN - 1);}
- int moul_f_8(void){return test("%f", (double)INT_MAX + 1);}
- int moul_f_9(void){return test("%%f 0000042 == |%f|\n", (double)0000042);}
- int moul_f_10(void){return test("%%f \t == |%f|\n", (double)'\t');}
- int moul_f_11(void){return test("%%f Lydie == |%f|\n", (double)'L'+'y'+'d'+'i'+'e');}
- int moul_f_12(void){return test("%%f 42.42 == |%f|\n", 42.42);}
- int moul_F_1_notmandatory(void){return test("%F", (double)42);}
- int moul_F_2_notmandatory(void){return test("Kashim a %F histoires à raconter", (double)1001);}
- int moul_F_3_notmandatory(void){return test("Il fait au moins %F\n", (double)-8000);}
- int moul_F_4_notmandatory(void){return test("%F", (double)-0);}
- int moul_F_5_notmandatory(void){return test("%F", (double)0);}
- int moul_F_6_notmandatory(void){return test("%F", (double)INT_MAX);}
- int moul_F_7_notmandatory(void){return test("%F", (double)INT_MIN);}
- int moul_F_8_notmandatory(void){return test("%F", (double)INT_MIN - 1);}
- int moul_F_9_notmandatory(void){return test("%F", (double)INT_MAX + 1);}
- int moul_F_10_notmandatory(void){return test("%%F 0000042 == |%F|\n", (double)0000042);}
- int moul_F_11_notmandatory(void){return test("%%F \t == |%F|\n", (double)'\t');}
- int moul_F_12_notmandatory(void){return test("%%F Lydie == |%F|\n", (double)'L'+'y'+'d'+'i'+'e');}
- int moul_F_13_notmandatory(void){return test("%%F 42.42 == |%F|\n", 42.42);}
- int moul_F_14_notmandatory(void){return test("%%F 42.42 == |%.2F|\n", 42.42);}
+int moul_f_1(void){return test("%f", (double)42);}
+int moul_f_2(void){return test("Kashim a %f histoires à raconter", (double)1001);}
+int moul_f_3(void){return test("Il fait au moins %f\n", (double)-8000);}
+int moul_f_4(void){return test("%f", (double)-0);}
+int moul_f_5(void){return test("%f", (double)0);}
+int moul_f_6(void){return test("%f", (double)INT_MAX);}
+int moul_f_7(void){return test("%f", (double)INT_MIN);}
+int moul_f_7b(void){return test("%f", (double)INT_MIN - 1);}
+int moul_f_8(void){return test("%f", (double)INT_MAX + 1);}
+int moul_f_9(void){return test("%%f 0000042 == |%f|\n", (double)0000042);}
+int moul_f_10(void){return test("%%f \t == |%f|\n", (double)'\t');}
+int moul_f_11(void){return test("%%f Lydie == |%f|\n", (double)'L'+'y'+'d'+'i'+'e');}
+int moul_f_12(void){return test("%%f 42.42 == |%f|\n", 42.42);}
+int moul_F_1_notmandatory(void){return test("%F", (double)42);}
+int moul_F_2_notmandatory(void){return test("Kashim a %F histoires à raconter", (double)1001);}
+int moul_F_3_notmandatory(void){return test("Il fait au moins %F\n", (double)-8000);}
+int moul_F_4_notmandatory(void){return test("%F", (double)-0);}
+int moul_F_5_notmandatory(void){return test("%F", (double)0);}
+int moul_F_6_notmandatory(void){return test("%F", (double)INT_MAX);}
+int moul_F_7_notmandatory(void){return test("%F", (double)INT_MIN);}
+int moul_F_8_notmandatory(void){return test("%F", (double)INT_MIN - 1);}
+int moul_F_9_notmandatory(void){return test("%F", (double)INT_MAX + 1);}
+int moul_F_10_notmandatory(void){return test("%%F 0000042 == |%F|\n", (double)0000042);}
+int moul_F_11_notmandatory(void){return test("%%F \t == |%F|\n", (double)'\t');}
+int moul_F_12_notmandatory(void){return test("%%F Lydie == |%F|\n", (double)'L'+'y'+'d'+'i'+'e');}
+int moul_F_13_notmandatory(void){return test("%%F 42.42 == |%F|\n", 42.42);}
+int moul_F_14_notmandatory(void){return test("%%F 42.42 == |%.2F|\n", 42.42);}
 
- int moul_o_1(void){return test("%o", 42);}
- int moul_o_2(void){return test("Kashim a %o histoires à raconter", 1001);}
- int moul_o_3(void){return test("Il fait au moins %o\n", -8000);}
- int moul_o_4(void){return test("%o", -0);}
- int moul_o_5(void){return test("%o", 0);}
- int moul_o_6(void){return test("%o", INT_MAX);}
- int moul_o_7(void){return test("%o", INT_MIN);}
- int moul_o_8(void){return test("%o", INT_MIN - 1);}
- int moul_o_9(void){return test("%o", INT_MAX + 1);}
- int moul_o_10(void){return test("%%o 0000042 == |%o|\n", 0000042);}
- int moul_o_11(void){return test("%%o \t == |%o|\n", '\t');}
- int moul_o_12(void){return test("%%o Lydie == |%o|\n", 'L'+'y'+'d'+'i'+'e');}
+int moul_o_1(void){return test("%o", 42);}
+int moul_o_2(void){return test("Kashim a %o histoires à raconter", 1001);}
+int moul_o_3(void){return test("Il fait au moins %o\n", -8000);}
+int moul_o_4(void){return test("%o", -0);}
+int moul_o_5(void){return test("%o", 0);}
+int moul_o_6(void){return test("%o", INT_MAX);}
+int moul_o_7(void){return test("%o", INT_MIN);}
+int moul_o_8(void){return test("%o", INT_MIN - 1);}
+int moul_o_9(void){return test("%o", INT_MAX + 1);}
+int moul_o_10(void){return test("%%o 0000042 == |%o|\n", 0000042);}
+int moul_o_11(void){return test("%%o \t == |%o|\n", '\t');}
+int moul_o_12(void){return test("%%o Lydie == |%o|\n", 'L'+'y'+'d'+'i'+'e');}
 
- int moul_u_1(void){return test("%u", 42);}
- int moul_u_2(void){return test("Kashim a %u histoires à raconter", 1001);}
- int moul_u_3(void){return test("Il fait au moins %u\n", -8000);}
- int moul_u_4(void){return test("%u", -0);}
- int moul_u_5(void){return test("%u", 0);}
- int moul_u_6(void){return test("%u", INT_MAX);}
- int moul_u_7(void){return test("%u", INT_MIN);}
- int moul_u_8(void){return test("%u", INT_MIN - 1);}
- int moul_u_9(void){return test("%u", INT_MAX + 1);}
- int moul_u_10(void){return test("%%u 0000042 == |%u|\n", 0000042);}
- int moul_u_11(void){return test("%%u \t == |%u|\n", '\t');}
- int moul_u_12(void){return test("%%u Lydie == |%u|\n", 'L'+'y'+'d'+'i'+'e');}
+int moul_u_1(void){return test("%u", 42);}
+int moul_u_2(void){return test("Kashim a %u histoires à raconter", 1001);}
+int moul_u_3(void){return test("Il fait au moins %u\n", -8000);}
+int moul_u_4(void){return test("%u", -0);}
+int moul_u_5(void){return test("%u", 0);}
+int moul_u_6(void){return test("%u", INT_MAX);}
+int moul_u_7(void){return test("%u", INT_MIN);}
+int moul_u_8(void){return test("%u", INT_MIN - 1);}
+int moul_u_9(void){return test("%u", INT_MAX + 1);}
+int moul_u_10(void){return test("%%u 0000042 == |%u|\n", 0000042);}
+int moul_u_11(void){return test("%%u \t == |%u|\n", '\t');}
+int moul_u_12(void){return test("%%u Lydie == |%u|\n", 'L'+'y'+'d'+'i'+'e');}
 
- int moul_x_1(void){return test("%x", 42);}
- int moul_x_2(void){return test("Kashim a %x histoires à raconter", 1001);}
- int moul_x_3(void){return test("Il fait au moins %x\n", -8000);}
- int moul_x_4(void){return test("%x", -0);}
- int moul_x_5(void){return test("%x", 0);}
- int moul_x_6(void){return test("%x", INT_MAX);}
- int moul_x_7(void){return test("%x", INT_MIN);}
- int moul_x_8(void){return test("%x", INT_MIN - 1);}
- int moul_x_9(void){return test("%x", INT_MAX + 1);}
- int moul_x_10(void){return test("%%x 0000042 == |%x|\n", 0000042);}
- int moul_x_11(void){return test("%%x \t == |%x|\n", '\t');}
- int moul_x_12(void){return test("%%x Lydie == |%x|\n", 'L'+'y'+'d'+'i'+'e');}
+int moul_x_1(void){return test("%x", 42);}
+int moul_x_2(void){return test("Kashim a %x histoires à raconter", 1001);}
+int moul_x_3(void){return test("Il fait au moins %x\n", -8000);}
+int moul_x_4(void){return test("%x", -0);}
+int moul_x_5(void){return test("%x", 0);}
+int moul_x_6(void){return test("%x", INT_MAX);}
+int moul_x_7(void){return test("%x", INT_MIN);}
+int moul_x_8(void){return test("%x", INT_MIN - 1);}
+int moul_x_9(void){return test("%x", INT_MAX + 1);}
+int moul_x_10(void){return test("%%x 0000042 == |%x|\n", 0000042);}
+int moul_x_11(void){return test("%%x \t == |%x|\n", '\t');}
+int moul_x_12(void){return test("%%x Lydie == |%x|\n", 'L'+'y'+'d'+'i'+'e');}
 
- int moul_hash_1(void){return test("%%#X 42 ==  %#X\n", 42);}
- int moul_hash_2(void){return test("%%X 42 ==  %X\n", 42);}
- int moul_hash_3(void){return test("%%#o 0 ==  %#o\n", 0);}
- int moul_hash_4(void){return test("%%o 0 ==  %o\n", 0);}
- int moul_hash_5(void){return test("%%#o INT_MAX ==  %#o\n", INT_MAX);}
- int moul_hash_6(void){return test("%%o INT_MAX ==  %o\n", INT_MAX);}
- int moul_hash_7(void){return test("%%#o INT_MIN ==  %#o\n", INT_MIN);}
- int moul_hash_8(void){return test("%%o INT_MIN ==  %o\n", INT_MIN);}
- int moul_hash_9(void){return test("%%#X INT_MIN ==  %#X\n", INT_MIN);}
- int moul_hash_10(void){return test("%%X INT_MIN ==  %X\n", INT_MIN);}
- int moul_hash_11(void){return test("%%#X INT_MAX ==  %#X\n", INT_MAX);}
- int moul_hash_12(void){return test("%%X INT_MAX ==  %X\n", INT_MAX);}
+int moul_hash_1(void){return test("%%#X 42 ==  %#X\n", 42);}
+int moul_hash_2(void){return test("%%X 42 ==  %X\n", 42);}
+int moul_hash_3(void){return test("%%#o 0 ==  %#o\n", 0);}
+int moul_hash_4(void){return test("%%o 0 ==  %o\n", 0);}
+int moul_hash_5(void){return test("%%#o INT_MAX ==  %#o\n", INT_MAX);}
+int moul_hash_6(void){return test("%%o INT_MAX ==  %o\n", INT_MAX);}
+int moul_hash_7(void){return test("%%#o INT_MIN ==  %#o\n", INT_MIN);}
+int moul_hash_8(void){return test("%%o INT_MIN ==  %o\n", INT_MIN);}
+int moul_hash_9(void){return test("%%#X INT_MIN ==  %#X\n", INT_MIN);}
+int moul_hash_10(void){return test("%%X INT_MIN ==  %X\n", INT_MIN);}
+int moul_hash_11(void){return test("%%#X INT_MAX ==  %#X\n", INT_MAX);}
+int moul_hash_12(void){return test("%%X INT_MAX ==  %X\n", INT_MAX);}
 
- int moul_prec_1(void){return test("%%-5.3s LYDI == |%-5.3s|\n", "LYDI");}
- int moul_prec_2(void){return test("%% 4.5i 42 == |% 4.5i|\n", 42);}
- int moul_prec_3(void){return test("%%04.5i 42 == |%04.5i|\n", 42);}
- int moul_prec_4(void){return test("%%04.3i 42 == |%04.3i|\n", 42);}
- int moul_prec_5(void){return test("%%04.2i 42 == |%04.2i|\n", 42);}
+int moul_prec_1(void){return test("%%-5.3s LYDI == |%-5.3s|\n", "LYDI");}
+int moul_prec_2(void){return test("%% 4.5i 42 == |% 4.5i|\n", 42);}
+int moul_prec_3(void){return test("%%04.5i 42 == |%04.5i|\n", 42);}
+int moul_prec_4(void){return test("%%04.3i 42 == |%04.3i|\n", 42);}
+int moul_prec_5(void){return test("%%04.2i 42 == |%04.2i|\n", 42);}
 
- int moul_zeropad_1(void){return test("%%04i 42 == |%04i|\n", 42);}
- int moul_zeropad_2(void){return test("%%05i 42 == |%05i|\n", 42);}
- int moul_zeropad_3(void){return test("%%0i 42 == |%0i|\n", 42);}
- int moul_zeropad_4(void){return test("%%0d 0000042 == |%0d|\n", 0000042);}
+int moul_zeropad_1(void){return test("%%04i 42 == |%04i|\n", 42);}
+int moul_zeropad_2(void){return test("%%05i 42 == |%05i|\n", 42);}
+int moul_zeropad_3(void){return test("%%0i 42 == |%0i|\n", 42);}
+int moul_zeropad_4(void){return test("%%0d 0000042 == |%0d|\n", 0000042);}
 
- int moul_leftjusty_1(void){return test("%%-i 42 == %-i\n", 42);}
- int moul_leftjusty_2(void){return test("%%-d 42 == %-d\n", INT_MIN);}
- int moul_leftjusty_3(void){return test("%%-i -42 == %-i\n", -42);}
- int moul_leftjusty_4(void){return test("%%-4d 42 == |%-4d|\n", 42);}
- int moul_leftjusty_5(void){return test("%%-5d -42 == |%-5d|\n", -42);}
- int moul_leftjusty_6(void){return test("|%3i|%-3i|\n", 42, 42);}
- int moul_leftjusty_7(void){return test("%%-4i 42 == |%-4i|\n", 42);}
+int moul_leftjusty_1(void){return test("%%-i 42 == %-i\n", 42);}
+int moul_leftjusty_2(void){return test("%%-d 42 == %-d\n", INT_MIN);}
+int moul_leftjusty_3(void){return test("%%-i -42 == %-i\n", -42);}
+int moul_leftjusty_4(void){return test("%%-4d 42 == |%-4d|\n", 42);}
+int moul_leftjusty_5(void){return test("%%-5d -42 == |%-5d|\n", -42);}
+int moul_leftjusty_6(void){return test("|%3i|%-3i|\n", 42, 42);}
+int moul_leftjusty_7(void){return test("%%-4i 42 == |%-4i|\n", 42);}
 
- int moul_as_1(void){return test("%%+i 42 == %+i\n", 42);}
- int moul_as_2(void){return test("%%+d 42 == %+d\n", INT_MAX);}
- int moul_as_3(void){return test("%%+i -42 == %+i\n", -42);}
- int moul_as_4(void){return test("%%+04d 42 == %0+04d\n", 42);}
+int moul_as_1(void){return test("%%+i 42 == %+i\n", 42);}
+int moul_as_2(void){return test("%%+d 42 == %+d\n", INT_MAX);}
+int moul_as_3(void){return test("%%+i -42 == %+i\n", -42);}
+int moul_as_4(void){return test("%%+04d 42 == %0+04d\n", 42);}
 
- int moul_sp_1(void){return test("%%      i 42 == |%      i|\n", 42);}
- int moul_sp_2(void){return test("%% i -42 == |% i|\n", -42);}
- int moul_sp_3(void){return test("%% 4i 42 == |% 4i|\n", 42);}
+int moul_sp_1(void){return test("%%      i 42 == |%      i|\n", 42);}
+int moul_sp_2(void){return test("%% i -42 == |% i|\n", -42);}
+int moul_sp_3(void){return test("%% 4i 42 == |% 4i|\n", 42);}
 
- int moul_notmandatory_e_1(void){return test("%e", (double)42);}
- int moul_notmandatory_e_2(void){return test("Kashim a %e histoires à raconter", (double)1001);}
- int moul_notmandatory_e_3(void){return test("Il fait au moins %e\n", (double)-8000);}
- int moul_notmandatory_e_4(void){return test("%e", (double)-0);}
- int moul_notmandatory_e_5(void){return test("%e", (double)0);}
- int moul_notmandatory_e_6(void){return test("%e", (double)INT_MAX);}
- int moul_notmandatory_e_7(void){return test("%e", (double)INT_MIN);}
- int moul_notmandatory_e_8(void){return test("%e", (double)INT_MIN - 1);}
- int moul_notmandatory_e_9(void){return test("%e", (double)INT_MAX + 1);}
- int moul_notmandatory_e_10(void){return test("%%e 0000042 == |%e|\n", (double)0000042);}
- int moul_notmandatory_e_11(void){return test("%%e \t == |%e|\n", (double)'\t');}
- int moul_notmandatory_e_12(void){return test("%%e Lydie == |%e|\n", (double)'L'+'y'+'d'+'i'+'e');}
- int moul_notmandatory_e_13(void){return test("%%e 42.42 == |%e|\n", 42.42);}
- int moul_notmandatory_e_14(void){return test("%E", (double)42);}
- int moul_notmandatory_e_15(void){return test("Kashim a %E histoires à raconter", (double)1001);}
- int moul_notmandatory_e_16(void){return test("Il fait au moins %E\n", (double)-8000);}
- int moul_notmandatory_e_17(void){return test("%E", (double)-0);}
- int moul_notmandatory_e_18(void){return test("%E", (double)0);}
- int moul_notmandatory_e_19(void){return test("%E", (double)INT_MAX);}
- int moul_notmandatory_e_20(void){return test("%E", (double)INT_MIN);}
- int moul_notmandatory_e_21(void){return test("%E", (double)INT_MIN - 1);}
- int moul_notmandatory_e_22(void){return test("%E", (double)INT_MAX + 1);}
- int moul_notmandatory_e_23(void){return test("%%E 0000042 == |%E|\n", (double)0000042);}
- int moul_notmandatory_e_24(void){return test("%%E \t == |%E|\n", (double)'\t');}
- int moul_notmandatory_e_25(void){return test("%%E Lydie == |%E|\n", (double)'L'+'y'+'d'+'i'+'e');}
- int moul_notmandatory_e_26(void){return test("%%E 42.42 == |%E|\n", 42.42);}
- int moul_notmandatory_e_27(void){return test("%%E 42.42 == |%.2E|\n", 42.42);}
+int moul_notmandatory_e_1(void){return test("%e", (double)42);}
+int moul_notmandatory_e_2(void){return test("Kashim a %e histoires à raconter", (double)1001);}
+int moul_notmandatory_e_3(void){return test("Il fait au moins %e\n", (double)-8000);}
+int moul_notmandatory_e_4(void){return test("%e", (double)-0);}
+int moul_notmandatory_e_5(void){return test("%e", (double)0);}
+int moul_notmandatory_e_6(void){return test("%e", (double)INT_MAX);}
+int moul_notmandatory_e_7(void){return test("%e", (double)INT_MIN);}
+int moul_notmandatory_e_8(void){return test("%e", (double)INT_MIN - 1);}
+int moul_notmandatory_e_9(void){return test("%e", (double)INT_MAX + 1);}
+int moul_notmandatory_e_10(void){return test("%%e 0000042 == |%e|\n", (double)0000042);}
+int moul_notmandatory_e_11(void){return test("%%e \t == |%e|\n", (double)'\t');}
+int moul_notmandatory_e_12(void){return test("%%e Lydie == |%e|\n", (double)'L'+'y'+'d'+'i'+'e');}
+int moul_notmandatory_e_13(void){return test("%%e 42.42 == |%e|\n", 42.42);}
+int moul_notmandatory_e_14(void){return test("%E", (double)42);}
+int moul_notmandatory_e_15(void){return test("Kashim a %E histoires à raconter", (double)1001);}
+int moul_notmandatory_e_16(void){return test("Il fait au moins %E\n", (double)-8000);}
+int moul_notmandatory_e_17(void){return test("%E", (double)-0);}
+int moul_notmandatory_e_18(void){return test("%E", (double)0);}
+int moul_notmandatory_e_19(void){return test("%E", (double)INT_MAX);}
+int moul_notmandatory_e_20(void){return test("%E", (double)INT_MIN);}
+int moul_notmandatory_e_21(void){return test("%E", (double)INT_MIN - 1);}
+int moul_notmandatory_e_22(void){return test("%E", (double)INT_MAX + 1);}
+int moul_notmandatory_e_23(void){return test("%%E 0000042 == |%E|\n", (double)0000042);}
+int moul_notmandatory_e_24(void){return test("%%E \t == |%E|\n", (double)'\t');}
+int moul_notmandatory_e_25(void){return test("%%E Lydie == |%E|\n", (double)'L'+'y'+'d'+'i'+'e');}
+int moul_notmandatory_e_26(void){return test("%%E 42.42 == |%E|\n", 42.42);}
+int moul_notmandatory_e_27(void){return test("%%E 42.42 == |%.2E|\n", 42.42);}
 
- int moul_notmandatory_g_1(void){return test("%g", (double)42);}
- int moul_notmandatory_g_2(void){return test("Kashim a %g histoires à raconter", (double)1001);}
- int moul_notmandatory_g_3(void){return test("Il fait au moins %g\n", (double)-8000);}
- int moul_notmandatory_g_4(void){return test("%g", (double)-0);}
- int moul_notmandatory_g_5(void){return test("%g", (double)0);}
- int moul_notmandatory_g_5b(void){return test("%g", (double)INT_MAX);}
- int moul_notmandatory_g_6(void){return test("%g", (double)INT_MIN);}
- int moul_notmandatory_g_7(void){return test("%g", (double)INT_MIN - 1);}
- int moul_notmandatory_g_8(void){return test("%g", (double)INT_MAX + 1);}
- int moul_notmandatory_g_9(void){return test("%%g 0000042 == |%g|\n", (double)0000042);}
- int moul_notmandatory_g_10(void){return test("%%g \t == |%g|\n", (double)'\t');}
- int moul_notmandatory_g_11(void){return test("%%g Lydie == |%g|\n", (double)'L'+'y'+'d'+'i'+'e');}
- int moul_notmandatory_g_12(void){return test("%%g 42.42 == |%g|\n", 42.42);}
- int moul_notmandatory_g_13(void){return test("%G", (double)42);}
- int moul_notmandatory_g_14(void){return test("Kashim a %G histoires à raconter", (double)1001);}
- int moul_notmandatory_g_15(void){return test("Il fait au moins %G\n", (double)-8000);}
- int moul_notmandatory_g_16(void){return test("%G", (double)-0);}
- int moul_notmandatory_g_17(void){return test("%G", (double)0);}
- int moul_notmandatory_g_18(void){return test("%G", (double)INT_MAX);}
- int moul_notmandatory_g_19(void){return test("%G", (double)INT_MIN);}
- int moul_notmandatory_g_20(void){return test("%G", (double)INT_MIN - 1);}
- int moul_notmandatory_g_21(void){return test("%G", (double)INT_MAX + 1);}
- int moul_notmandatory_g_22(void){return test("%%G 0000042 == |%G|\n", (double)0000042);}
- int moul_notmandatory_g_23(void){return test("%%G \t == |%G|\n", (double)'\t');}
- int moul_notmandatory_g_24(void){return test("%%G Lydie == |%G|\n", (double)'L'+'y'+'d'+'i'+'e');}
- int moul_notmandatory_g_25(void){return test("%%G 42.42 == |%G|\n", 42.42);}
- int moul_notmandatory_g_26(void){return test("%%G 42.42 == |%.2G|\n", 42.42);}
+int moul_notmandatory_g_1(void){return test("%g", (double)42);}
+int moul_notmandatory_g_2(void){return test("Kashim a %g histoires à raconter", (double)1001);}
+int moul_notmandatory_g_3(void){return test("Il fait au moins %g\n", (double)-8000);}
+int moul_notmandatory_g_4(void){return test("%g", (double)-0);}
+int moul_notmandatory_g_5(void){return test("%g", (double)0);}
+int moul_notmandatory_g_5b(void){return test("%g", (double)INT_MAX);}
+int moul_notmandatory_g_6(void){return test("%g", (double)INT_MIN);}
+int moul_notmandatory_g_7(void){return test("%g", (double)INT_MIN - 1);}
+int moul_notmandatory_g_8(void){return test("%g", (double)INT_MAX + 1);}
+int moul_notmandatory_g_9(void){return test("%%g 0000042 == |%g|\n", (double)0000042);}
+int moul_notmandatory_g_10(void){return test("%%g \t == |%g|\n", (double)'\t');}
+int moul_notmandatory_g_11(void){return test("%%g Lydie == |%g|\n", (double)'L'+'y'+'d'+'i'+'e');}
+int moul_notmandatory_g_12(void){return test("%%g 42.42 == |%g|\n", 42.42);}
+int moul_notmandatory_g_13(void){return test("%G", (double)42);}
+int moul_notmandatory_g_14(void){return test("Kashim a %G histoires à raconter", (double)1001);}
+int moul_notmandatory_g_15(void){return test("Il fait au moins %G\n", (double)-8000);}
+int moul_notmandatory_g_16(void){return test("%G", (double)-0);}
+int moul_notmandatory_g_17(void){return test("%G", (double)0);}
+int moul_notmandatory_g_18(void){return test("%G", (double)INT_MAX);}
+int moul_notmandatory_g_19(void){return test("%G", (double)INT_MIN);}
+int moul_notmandatory_g_20(void){return test("%G", (double)INT_MIN - 1);}
+int moul_notmandatory_g_21(void){return test("%G", (double)INT_MAX + 1);}
+int moul_notmandatory_g_22(void){return test("%%G 0000042 == |%G|\n", (double)0000042);}
+int moul_notmandatory_g_23(void){return test("%%G \t == |%G|\n", (double)'\t');}
+int moul_notmandatory_g_24(void){return test("%%G Lydie == |%G|\n", (double)'L'+'y'+'d'+'i'+'e');}
+int moul_notmandatory_g_25(void){return test("%%G 42.42 == |%G|\n", 42.42);}
+int moul_notmandatory_g_26(void){return test("%%G 42.42 == |%.2G|\n", 42.42);}
 
- int moul_notmandatory_a_1(void){return test("%a", (double)42);}
- int moul_notmandatory_a_2(void){return test("Kashim a %a histoires à raconter", (double)1001);}
- int moul_notmandatory_a_3(void){return test("Il fait au moins %a\n", (double)-8000);}
- int moul_notmandatory_a_4(void){return test("%a", (double)-0);}
- int moul_notmandatory_a_5(void){return test("%a", (double)0);}
- int moul_notmandatory_a_6(void){return test("%a", (double)INT_MAX);}
- int moul_notmandatory_a_7(void){return test("%a", (double)INT_MIN);}
- int moul_notmandatory_a_8(void){return test("%a", (double)INT_MIN - 1);}
- int moul_notmandatory_a_9(void){return test("%a", (double)INT_MAX + 1);}
- int moul_notmandatory_a_11(void){return test("%%a 0000042 == |%a|\n", (double)0000042);}
- int moul_notmandatory_a_12(void){return test("%%a \t == |%a|\n", (double)'\t');}
- int moul_notmandatory_a_13(void){return test("%%a Lydie == |%a|\n", (double)'L'+'y'+'d'+'i'+'e');}
- int moul_notmandatory_a_14(void){return test("%%a 42.42 == |%a|\n", 42.42);}
- int moul_notmandatory_a_15(void){return test("%A", (double)42);}
- int moul_notmandatory_a_16(void){return test("Kashim a %A histoires à raconter", (double)1001);}
- int moul_notmandatory_a_17(void){return test("Il fait au moins %A\n", (double)-8000);}
- int moul_notmandatory_a_18(void){return test("%A", (double)-0);}
- int moul_notmandatory_a_19(void){return test("%A", (double)0);}
- int moul_notmandatory_a_20(void){return test("%A", (double)INT_MAX);}
- int moul_notmandatory_a_21(void){return test("%A", (double)INT_MIN);}
- int moul_notmandatory_a_22(void){return test("%A", (double)INT_MIN - 1);}
- int moul_notmandatory_a_23(void){return test("%A", (double)INT_MAX + 1);}
- int moul_notmandatory_a_24(void){return test("%%A 0000042 == |%A|\n", (double)0000042);}
- int moul_notmandatory_a_25(void){return test("%%A \t == |%A|\n", (double)'\t');}
- int moul_notmandatory_a_26(void){return test("%%A Lydie == |%A|\n", (double)'L'+'y'+'d'+'i'+'e');}
- int moul_notmandatory_a_27(void){return test("%%A 42.42 == |%A|\n", 42.42);}
- int moul_notmandatory_a_28(void){return test("%%A 42.42 == |%.2A|\n", 42.42);}
+int moul_notmandatory_a_1(void){return test("%a", (double)42);}
+int moul_notmandatory_a_2(void){return test("Kashim a %a histoires à raconter", (double)1001);}
+int moul_notmandatory_a_3(void){return test("Il fait au moins %a\n", (double)-8000);}
+int moul_notmandatory_a_4(void){return test("%a", (double)-0);}
+int moul_notmandatory_a_5(void){return test("%a", (double)0);}
+int moul_notmandatory_a_6(void){return test("%a", (double)INT_MAX);}
+int moul_notmandatory_a_7(void){return test("%a", (double)INT_MIN);}
+int moul_notmandatory_a_8(void){return test("%a", (double)INT_MIN - 1);}
+int moul_notmandatory_a_9(void){return test("%a", (double)INT_MAX + 1);}
+int moul_notmandatory_a_11(void){return test("%%a 0000042 == |%a|\n", (double)0000042);}
+int moul_notmandatory_a_12(void){return test("%%a \t == |%a|\n", (double)'\t');}
+int moul_notmandatory_a_13(void){return test("%%a Lydie == |%a|\n", (double)'L'+'y'+'d'+'i'+'e');}
+int moul_notmandatory_a_14(void){return test("%%a 42.42 == |%a|\n", 42.42);}
+int moul_notmandatory_a_15(void){return test("%A", (double)42);}
+int moul_notmandatory_a_16(void){return test("Kashim a %A histoires à raconter", (double)1001);}
+int moul_notmandatory_a_17(void){return test("Il fait au moins %A\n", (double)-8000);}
+int moul_notmandatory_a_18(void){return test("%A", (double)-0);}
+int moul_notmandatory_a_19(void){return test("%A", (double)0);}
+int moul_notmandatory_a_20(void){return test("%A", (double)INT_MAX);}
+int moul_notmandatory_a_21(void){return test("%A", (double)INT_MIN);}
+int moul_notmandatory_a_22(void){return test("%A", (double)INT_MIN - 1);}
+int moul_notmandatory_a_23(void){return test("%A", (double)INT_MAX + 1);}
+int moul_notmandatory_a_24(void){return test("%%A 0000042 == |%A|\n", (double)0000042);}
+int moul_notmandatory_a_25(void){return test("%%A \t == |%A|\n", (double)'\t');}
+int moul_notmandatory_a_26(void){return test("%%A Lydie == |%A|\n", (double)'L'+'y'+'d'+'i'+'e');}
+int moul_notmandatory_a_27(void){return test("%%A 42.42 == |%A|\n", 42.42);}
+int moul_notmandatory_a_28(void){return test("%%A 42.42 == |%.2A|\n", 42.42);}
 
- int moul_notmandatory_star_1(void){return test("%%-*.3s LYDI == |%-*.3s|\n", 5, "LYDI");}
- int moul_notmandatory_star_2(void){return test("%% *.5i 42 == |% *.5i|\n", 4, 42);}
- int moul_notmandatory_star_3(void){return test("%%*i 42 == |%*i|\n", 5, 42);}
- int moul_notmandatory_star_4(void){return test("%%*i 42 == |%*i|\n", 3, 42);}
- int moul_notmandatory_star_5(void){return test("%%*i 42 == |%*i|\n", 2, 42);}
+int moul_notmandatory_star_1(void){return test("%%-*.3s LYDI == |%-*.3s|\n", 5, "LYDI");}
+int moul_notmandatory_star_2(void){return test("%% *.5i 42 == |% *.5i|\n", 4, 42);}
+int moul_notmandatory_star_3(void){return test("%%*i 42 == |%*i|\n", 5, 42);}
+int moul_notmandatory_star_4(void){return test("%%*i 42 == |%*i|\n", 3, 42);}
+int moul_notmandatory_star_5(void){return test("%%*i 42 == |%*i|\n", 2, 42);}
 
- int moul_notmandatory_widechar_mix2_throwswarning(void){return test("Lalalala, %d%% des gens qui parlent %C Ly adorent %s. Ou Presque. %d, %u, %X, %c", 100, L'à', "Ly", 2, 10, 10000, '\n', "ôHohoho");}
- int moul_notmandatory_widechar_basic1(void){wchar_t c = L'\x82'; return test("%C\n", c);}
- int moul_notmandatory_widechar_basic2(void){return test("%C\n", L'ø');}
- int moul_notmandatory_widestr_basic2(void){wchar_t wz[3] = L"@@"; return test("%ls", wz);}
+int moul_notmandatory_widechar_mix2_throwswarning(void){return test("Lalalala, %d%% des gens qui parlent %C Ly adorent %s. Ou Presque. %d, %u, %X, %c", 100, L'à', "Ly", 2, 10, 10000, '\n', "ôHohoho");}
+int moul_notmandatory_widechar_basic1(void){wchar_t c = L'\x82'; return test("%C\n", c);}
+int moul_notmandatory_widechar_basic2(void){return test("%C\n", L'ø');}
+int moul_notmandatory_widestr_basic2(void){wchar_t wz[3] = L"@@"; return test("%ls", wz);}
 
 
 
