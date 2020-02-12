@@ -6,7 +6,7 @@
 /*   By: alpeliss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 21:00:15 by alpeliss          #+#    #+#             */
-/*   Updated: 2020/02/09 00:49:25 by alpeliss         ###   ########.fr       */
+/*   Updated: 2020/02/12 18:48:45 by alpeliss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int				print_int(t_env *e)
 
 	nb = get_nb(e);
 	e->i++;
-	fill = (!(e->tags.flags % 11) && e->tags.preci == -1) ? '0' : ' ';
+	fill = (!(e->tags.flags % 11) && e->tags.preci <= -1) ? '0' : ' ';
 	if (nb.sign && fill == '0')
 		e->value += write(1, &nb.c_sign, 1);
 	i = 0;

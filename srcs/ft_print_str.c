@@ -6,7 +6,7 @@
 /*   By: alpeliss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/05 13:37:03 by alpeliss          #+#    #+#             */
-/*   Updated: 2020/02/12 14:52:14 by alpeliss         ###   ########.fr       */
+/*   Updated: 2020/02/12 18:45:56 by alpeliss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	print_str(t_env *e)
 	int		len;
 	char	fill;
 
+	e->tags.preci = (e->tags.preci < -1) ? -e->tags.preci : e->tags.preci;
 	str = va_arg(e->ap, char *);
 	len = (str) ? ft_strlen(str) : 6;
 	len = (e->tags.preci < len && e->tags.preci != -1) ? e->tags.preci : len;

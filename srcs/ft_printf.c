@@ -6,7 +6,7 @@
 /*   By: alpeliss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 13:10:57 by alpeliss          #+#    #+#             */
-/*   Updated: 2020/02/08 21:09:19 by alpeliss         ###   ########.fr       */
+/*   Updated: 2020/02/12 18:22:28 by alpeliss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,10 @@ int				ft_printf(const char *s, ...)
 		if (s[e.i] == '%')
 		{
 			if (!param_handler(&e, s))
-				return (write(1, "param handler\n", 14));
+			{
+				va_end(e.ap);
+				return (-1);
+			}
 		}
 		else
 		{

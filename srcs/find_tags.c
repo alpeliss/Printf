@@ -6,7 +6,7 @@
 /*   By: alpeliss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 17:44:10 by alpeliss          #+#    #+#             */
-/*   Updated: 2020/02/07 18:53:23 by alpeliss         ###   ########.fr       */
+/*   Updated: 2020/02/12 18:46:01 by alpeliss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,8 @@ t_tags			find_tags(t_env *e, const char *s)
 		e->i++;
 		tags.preci = get_num_value(e, s);
 	}
+	if (tags.width < 0)
+		tags.flags *= (tags.flags % 2) ? 2 : 1;
+	tags.width = (tags.width < 0) ? -tags.width : tags.width;
 	return (tags);
 }
