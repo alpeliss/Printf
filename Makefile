@@ -40,6 +40,9 @@ clean:
 fclean:		clean
 	${RM} ${NAME}
 
+bonus:	${OBJS} 
+	ar rc ${NAME} ${OBJS} ${LIB}
+
 re:		fclean all
 
 c:		all clean

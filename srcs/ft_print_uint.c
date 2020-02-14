@@ -6,7 +6,7 @@
 /*   By: alpeliss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 18:14:47 by alpeliss          #+#    #+#             */
-/*   Updated: 2020/02/11 00:29:22 by alpeliss         ###   ########.fr       */
+/*   Updated: 2020/02/14 11:56:21 by alpeliss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int				print_uint(t_env *e, char specif)
 
 	nb = get_nb(e, specif);
 	e->i++;
-	fill = (!(e->tags.flags % 11) && e->tags.preci == -1) ? '0' : ' ';
+	fill = (!(e->tags.flags % 11) && e->tags.preci <= -1) ? '0' : ' ';
 	i = 0;
 	if (nb.sign && fill == '0')
 		e->value += pre(specif);

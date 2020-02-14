@@ -6,7 +6,7 @@
 /*   By: alpeliss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 14:14:57 by alpeliss          #+#    #+#             */
-/*   Updated: 2020/02/12 18:56:42 by alpeliss         ###   ########.fr       */
+/*   Updated: 2020/02/14 12:10:14 by alpeliss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,20 @@
 
 static int	print_addr(void *addr, int print)
 {
-	long long	add_val;
-	long long	div;
-	char		c;
-	int			size;
+	unsigned long long	add_val;
+	unsigned long long	div;
+	char				c;
+	int					size;
 
 	size = 0;
-	add_val = (long long)addr;
+	add_val = (unsigned long long)addr;
 	div = 16;
-	while (add_val / div)
+	while (div * 16 && add_val / div)
+	{
 		div *= 16;
-	div /= 16;
+	}
+	if (!(add_val / div))
+		div /= 16;
 	while (div)
 	{
 		c = (add_val / div < 10) ? add_val / div
